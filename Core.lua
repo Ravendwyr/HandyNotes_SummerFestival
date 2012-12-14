@@ -8,7 +8,7 @@
 
 
 -- declaration
-local ID, SummerFestival = ...
+local _, SummerFestival = ...
 SummerFestival.points = {}
 
 
@@ -201,7 +201,7 @@ local options = {
 function SummerFestival:OnEnable()
 	local _, month, day, year = CalendarGetDate()
 
-	if month == 10 and (day >= 18 and day <= 31) then
+	if ( month == 6 and day >= 21 ) and ( month == 7 and day <= 4 ) then
 		HandyNotes:RegisterPluginDB("SummerFestival", self, options)
 		self:RegisterEvent("QUEST_FINISHED", "Refresh")
 
@@ -217,4 +217,4 @@ end
 
 
 -- activate
-LibStub("AceAddon-3.0"):NewAddon(SummerFestival, ID, "AceEvent-3.0")
+LibStub("AceAddon-3.0"):NewAddon(SummerFestival, "HandyNotes_SummerFestival", "AceEvent-3.0")
