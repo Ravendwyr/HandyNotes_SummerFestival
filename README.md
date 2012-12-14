@@ -5,10 +5,10 @@ HandyNotes - The Midsummer Festival
 What it does
 ------------
 
-This addon displays locations of unvisited bonfires on the worldmap and minimap while the Midsummer Festival is active (21st June - 4th July).  
+This addon displays locations of unvisited bonfires on the worldmap and minimap while the Midsummer Festival is active (21st June - 4th July).
 If you also have TomTom or Cartographer installed, you can right-click on a marker to create a Waypoint arrow.
 
-This addon is the spiritual successor to [TourGuide - The Midsummer Festival](https://github.com/EthanCentaurai/TourGuide_MidsummerFestival), re-written as a HandyNotes plug-in due to TourGuide being broken and abandoned.
+This addon is the successor to [TourGuide - The Midsummer Festival](https://github.com/EthanCentaurai/TourGuide_MidsummerFestival), re-written as a HandyNotes plug-in due to TourGuide being broken and abandoned.
 
 Requires [HandyNotes](http://www.curse.com/addons/wow/handynotes) to work.
 
@@ -41,10 +41,8 @@ If you have any comments, bug reports or feature requests, please leave a commen
 About the Author
 ----------------
 
-This addon was lovingly created by Ethan Centaurai, who currently lives in Manningree in south-east England.
+This addon was lovingly made by Ethan Centaurai, who usually plays as [Ulbrecht](http://eu.battle.net/wow/en/character/ghostlands/ulbrecht/simple) on Ghostlands-EU.
 
 * Visit my [blog](http://www.noblewolf.net/).
-* Follow me on [Twitter](http://twitter.com/StevenBlanchard).    
-* Star me on [GitHub](https://github.com/EthanCentaurai).
-
-Profile pic made by [Fyreuni](http://daily-quests.com/comic/).
+* Follow me on [Twitter](http://twitter.com/StevenBlanchard).
+* Watch me on [GitHub](https://github.com/EthanCentaurai).
