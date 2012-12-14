@@ -1,4 +1,4 @@
-﻿
+
 ------------------------------------------
 --  This addon was heavily inspired by  --
 --    HandyNotes_Lorewalkers            --
