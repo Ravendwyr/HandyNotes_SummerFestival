@@ -43,6 +43,6 @@ About the Author
 
 This addon was lovingly made by Ethan Centaurai, who usually plays as [Ulbrecht](http://eu.battle.net/wow/en/character/ghostlands/ulbrecht/simple) on Ghostlands-EU.
 
-* Visit my [blog](http://www.noblewolf.net/).
+* Visit my [website](http://www.ethancentaurai.com/).
 * Follow me on [Twitter](http://twitter.com/StevenBlanchard).
 * Watch me on [GitHub](https://github.com/EthanCentaurai).
