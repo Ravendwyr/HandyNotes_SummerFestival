@@ -5,7 +5,7 @@ HandyNotes - The Midsummer Festival
 What it does
 ------------
 
-This addon displays locations of unvisited bonfires on the worldmap and minimap while the Midsummer Festival is active (21st June - 4th July).
+This addon displays locations of unvisited bonfires on the worldmap and minimap.
 If you also have TomTom or Cartographer installed, you can right-click on a marker to create a Waypoint arrow.
 
 This addon is the successor to [TourGuide - The Midsummer Festival](https://github.com/EthanCentaurai/TourGuide_MidsummerFestival), re-written as a HandyNotes plug-in due to TourGuide being broken and abandoned.
