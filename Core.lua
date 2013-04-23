@@ -38,6 +38,8 @@ local HandyNotes = _G.HandyNotes
 local NotePoint = _G.NotePoint
 local TomTom = _G.TomTom
 
+local points = SummerFestival.points
+
 
 -- plugin handler for HandyNotes
 function SummerFestival:OnEnter(mapFile, coord)
@@ -155,7 +157,7 @@ do
 
 	function SummerFestival:GetNodes(mapFile)
 		mapFile = gsub(mapFile, "_terrain%d+$", "")
-		return iter, self.points[mapFile], nil
+		return iter, points[mapFile], nil
 	end
 end
 
