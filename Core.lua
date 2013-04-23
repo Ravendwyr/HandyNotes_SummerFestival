@@ -22,6 +22,7 @@ local _G = getfenv(0)
 
 local CloseDropDownMenus = _G.CloseDropDownMenus
 local GameTooltip = _G.GameTooltip
+local gsub = _G.string.gsub
 local IsQuestFlaggedCompleted = _G.IsQuestFlaggedCompleted
 local LibStub = _G.LibStub
 local next = _G.next
@@ -153,6 +154,7 @@ do
 	end
 
 	function SummerFestival:GetNodes(mapFile)
+		mapFile = gsub(mapFile, "_terrain%d+$", "")
 		return iter, self.points[mapFile], nil
 	end
 end
