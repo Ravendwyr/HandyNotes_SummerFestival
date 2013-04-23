@@ -3,23 +3,35 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 
 
 local _, SummerFestival = ...
-local points = SummerFestival.points -- points[<mapfile>] = { [<coordinates>] = <quest ID> }
+local points = SummerFestival.points
+-- points[<mapfile>] = { [<coordinates>] = { <quest ID>, <achievement ID>, <achievement criteria ID> } }
 
 
--- Eastern Kingdoms
+----------------------
+-- Eastern Kingdoms --
+----------------------
 
 
--- Kalimdor
+--------------
+-- Kalimdor --
+--------------
 
 
--- Outland
+-------------
+-- Outland --
+-------------
 
 
--- Northrend
+---------------
+-- Northrend --
+---------------
 
 
--- Cataclysm
+---------------
+-- Cataclysm --
+---------------
 
 
--- Pandaria
-
+--------------
+-- Pandaria --
+--------------
