@@ -80,7 +80,7 @@ do
 	local currentZone, currentCoord
 
 	local function close()
-		-- we call it here to avoid "for initial value must be a number" errors
+		-- we need to do this to avoid "for initial value must be a number" errors
 		CloseDropDownMenus()
 	end
 
@@ -92,7 +92,7 @@ do
 		if level == 1 then
 			-- create the title of the menu
 			info.isTitle = 1
-			info.text = "HandyNotes - Summer Festival"
+			info.text = "Summer Festival Bonfire"
 			info.notCheckable = 1
 
 			UIDropDownMenu_AddButton(info, level)
@@ -103,7 +103,6 @@ do
 				info.isTitle = nil
 				info.notCheckable = nil
 				info.text = "Create waypoint"
-				info.icon = nil
 				info.func = createWaypoint
 				info.arg1 = currentZone
 				info.arg2 = currentCoord
@@ -113,7 +112,6 @@ do
 
 			-- close menu item
 			info.text = "Close"
-			info.icon = nil
 			info.func = close
 			info.arg1 = nil
 			info.arg2 = nil
@@ -145,8 +143,12 @@ do
 		local state, value = next(t, prestate)
 
 		while state do -- have we reached the end of this zone?
-			if value and (db.completed or not IsQuestFlaggedCompleted(value)) then
-				return state, nil, "interface\\icons\\inv_misc_firedancer_01", db.icon_scale, db.icon_alpha -- temp icon
+			if value then
+				local questID, mode = value:match("(.*):(.*)")
+
+				if (db.completed or not IsQuestFlaggedCompleted(questID)) then
+					return state, nil, "interface\\icons\\inv_misc_firedancer_01", db.icon_scale, db.icon_alpha -- temp icon
+				end
 			end
 
 			state, value = next(t, state) -- get next data
