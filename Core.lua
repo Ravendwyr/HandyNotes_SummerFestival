@@ -51,7 +51,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 		tooltip:SetOwner(self, "ANCHOR_RIGHT")
 	end
 
-	tooltip:SetText("Bonfire")
+	tooltip:SetText("Midsummer Festival Bonfire")
 	tooltip:Show()
 end
 
@@ -68,9 +68,9 @@ local function createWaypoint(button, mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
 
 	if TomTom then
-		TomTom:AddZWaypoint(c, z, x * 100, y * 100, "Bonfire")
+		TomTom:AddZWaypoint(c, z, x * 100, y * 100, "Midsummer Festival Bonfire")
 	elseif Cartographer_Waypoints then
-		Cartographer_Waypoints:AddWaypoint( NotePoint:new(HandyNotes:GetCZToZone(c, z), x, y, "Bonfire") )
+		Cartographer_Waypoints:AddWaypoint( NotePoint:new(HandyNotes:GetCZToZone(c, z), x, y, "Midsummer Festival Bonfire") )
 	end
 end
 
@@ -92,7 +92,7 @@ do
 		if level == 1 then
 			-- create the title of the menu
 			info.isTitle = 1
-			info.text = "Summer Festival Bonfire"
+			info.text = "Midsummer Festival Bonfire"
 			info.notCheckable = 1
 
 			UIDropDownMenu_AddButton(info, level)
@@ -167,8 +167,8 @@ end
 -- config
 local options = {
 	type = "group",
-	name = "Summer Festival",
-	desc = "Summer Fesitval bonfire locations.",
+	name = "Midsummer Festival",
+	desc = "Midsummer Fesitval bonfire locations.",
 	get = function(info) return db[info[#info]] end,
 	set = function(info, v)
 		db[info[#info]] = v
