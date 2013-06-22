@@ -36,30 +36,30 @@ local points = SummerFestival.points
 -- Pandaria --
 --------------
 points["DreadWastes"] = {
-	[56006940] = "32497:B",	-- Soggy's Gamble
+	[56076958] = "32497:B",	-- Soggy's Gamble
 }
 
 points["Krasarang"] = {
-	[73900930] = "32499:B",	-- Zhu's Watch
+	[73990950] = "32499:B",	-- Zhu's Watch
 }
 
 points["KunLaiSummit"] = {
-	[71109090] = "32500:B",	-- Binan Village
+	[71159087] = "32500:B",	-- Binan Village
 }
 
 points["TheJadeForest"] = {
-	[47104700] = "32498:B",	-- Dawn's Blossom
+	[47184719] = "32498:B",	-- Dawn's Blossom
 }
 
 points["TownlongWastes"] = {
-	[71405630] = "32501:B",	-- Longying Outpost
+	[71525629] = "32501:B",	-- Longying Outpost
 }
 
 points["ValeofEternalBlossoms"] = {
-	[77763400] = "32496:D",
-	[79683727] = "32510:H",
+	[77763400] = "32496:D",	-- Shrine of Two Moons
+	[79673727] = "32510:H",	-- Shrine of Seven Stars
 }
 
 points["ValleyoftheFourWinds"] = {
-	[51805120] = "32502:B",	-- Halfhill
+	[51825133] = "32502:B",	-- Halfhill
 }
