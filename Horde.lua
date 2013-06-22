@@ -42,7 +42,7 @@ points["Pandaria"] = {
 	[53924691] = "32500:B",	-- Binan Village, Kun-Lai Summit
 	[37274134] = "32501:B",	-- Longying Outpost, Townlong Steppes
 	[52256696] = "32502:B",	-- Halfhill, Valley of the Four Winds
-	[53435182] = "32503:D"	-- Shrine of Seven Stars, Vale of Eternal Blossoms
+	[53435182] = "32503:D",	-- Shrine of Seven Stars, Vale of Eternal Blossoms
 	[53125129] = "32509:H",	-- Shrine of Two Moons, Vale of Eternal Blossoms
 }
 
