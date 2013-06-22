@@ -35,6 +35,18 @@ local points = SummerFestival.points
 --------------
 -- Pandaria --
 --------------
+points["Pandaria"] = {
+	[53125129] = "32496:D",	-- Shrine of Two Moons, Vale of Eternal Blossoms
+	[36197488] = "32497:B",	-- Soggy's Gamble, Dread Wastes
+	[68295050] = "32498:B",	-- Dawn's Blossom, The Jade Forest
+	[59776851] = "32499:B",	-- Zhu's Watch, Krasarang Wilds
+	[53924691] = "32500:B",	-- Binan Village, Kun-Lai Summit
+	[37274134] = "32501:B",	-- Longying Outpost, Townlong Steppes
+	[52256696] = "32502:B",	-- Halfhill, Valley of the Four Winds
+	[53435182] = "32510:H",	-- Shrine of Seven Stars, Vale of Eternal Blossoms
+}
+
+
 points["DreadWastes"] = {
 	[56076958] = "32497:B",	-- Soggy's Gamble
 }
