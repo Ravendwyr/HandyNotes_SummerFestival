@@ -171,8 +171,8 @@ points["StonetalonMountains"] = {
 }
 
 points["Tanaris"] = {
-	[49002700] = "11802:D",	-- Gadgetzan
-	[52002900] = "11833:H",	-- Gadgetzan
+	[49842817] = "11802:D",	-- Gadgetzan (west)
+	[52643026] = "11833:H",	-- Gadgetzan (east)
 }
 
 points["Teldrassil"] = {
