@@ -78,7 +78,7 @@ points["StranglethornJungle"] = {
 
 points["SwampOfSorrows"] = {
 	[77001500] = "11781:D",	-- Bogpaddle
-	[76001400] = "28989:H",	-- Bogpaddle
+	[70241573] = "28929:H",	-- Bogpaddle
 }
 
 points["TheCapeOfStranglethorn"] = {
