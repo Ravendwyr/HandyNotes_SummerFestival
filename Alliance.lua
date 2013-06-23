@@ -82,8 +82,8 @@ points["SwampOfSorrows"] = {
 }
 
 points["TheCapeOfStranglethorn"] = {
-	[51007100] = "11801:D",	-- Booty Bay
-	[50007000] = "11832:H",	-- Booty Bay
+	[50547069] = "11801:D",	-- Wild Shore (south)
+	[51976764] = "11832:H",	-- Wild Shore (north)
 }
 
 points["Tirisfal"] = {
