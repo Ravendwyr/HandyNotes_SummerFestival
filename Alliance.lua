@@ -277,7 +277,7 @@ points["ZulDrak"] = {
 -- Cataclysm --
 ---------------
 points["Deepholm"] = {
-	[49005100] = "29036:B",	-- Temple of Earth
+	[49405132] = "29036:B",	-- Temple of Earth
 }
 
 points["Hyjal"] = {
@@ -295,7 +295,7 @@ points["Uldum"] = {
 }
 
 points["VashjirRuins"] = {
-	[49004200] = "29031:B",	-- Silver Tide Hollow
+	[49354199] = "29031:B",	-- Silver Tide Hollow
 }
 
 
