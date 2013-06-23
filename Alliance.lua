@@ -11,74 +11,74 @@ local points = SummerFestival.points
 -- Eastern Kingdoms --
 ----------------------
 points["Arathi"] = {
-	[44004600] = "11804:H",	-- Refuge Pointe
-	[69004200] = "11764:D",	-- Hammerfall
+	[44304603] = "11804:H",	-- Refuge Pointe
+	[69084286] = "11764:D",	-- Hammerfall
 }
 
 points["Badlands"] = {
-	[19005600] = "28925:H",	-- Dragon's Mouth
-	[24003700] = "11766:D",	-- New Kargath
+	[19005618] = "28925:H",	-- Dragon's Mouth
+	[24113722] = "11766:D",	-- New Kargath
 }
 
 points["BlastedLands"] = {
-	[46001400] = "28917:D",	-- Dreadmaul Hold
-	[58001700] = "11808:H",	-- Nethergarde Keep
+	[46361426] = "28917:D",	-- Dreadmaul Hold
+	[55531488] = "11808:H",	-- Nethergarde Keep
 }
 
 points["BurningSteppes"] = {
-	[51002900] = "11768:D",	-- Flame Crest
-	[68006000] = "11810:H",	-- Norman's Vigil
+	[51532918] = "11768:D",	-- Flame Crest
+	[68346064] = "11810:H",	-- Morgan's Vigil
 }
 
 points["DunMorogh"] = {
-	[54004500] = "11813:H",	-- Kharanos
+	[53804523] = "11813:H",	-- Kharanos
 }
 
 points["Duskwood"] = {
-	[73005500] = "11814:H",	-- Darkshire
+	[73695462] = "11814:H",	-- Darkshire
 }
 
 points["Elwynn"] = {
-	[43006500] = "11816:H",	-- Goldshire
+	[43476263] = "11816:H",	-- Goldshire
 }
 
 points["EversongWoods"] = {
-	[46005000] = "11772:D",	-- North Sanctum
+	[46355039] = "11772:D",	-- Falconwing Square
 }
 
 points["Ghostlands"] = {
-	[46002600] = "11774:D",	-- Tranquillien
+	[47052593] = "11774:D",	-- Tranquillien
 }
 
 points["HillsbradFoothills"] = {
-	[55005000] = "11776:D",	-- Tarren Mill
+	[54504989] = "11776:D",	-- Tarren Mill
 }
 
 points["Hinterlands"] = {
-	[14005000] = "11826:H",	-- Aerie Peak
-	[76007400] = "11784:D",	-- Revantusk Village
+	[14345007] = "11826:H",	-- Aerie Peak
+	[76637455] = "11784:D",	-- Revantusk Village
 }
 
 points["LochModan"] = {
-	[32004000] = "11820:H",	-- Thelsamar
+	[32554095] = "11820:H",	-- Thelsamar
 }
 
 points["Redridge"] = {
-	[24005300] = "11822:H",	-- Lakeshire
+	[24905338] = "11822:H",	-- Lakeshire
 }
 
 points["Silverpine"] = {
-	[50003800] = "11580:D",	-- The Sepulcher
+	[49623866] = "11580:D",	-- The Sepulcher
 }
 
 points["StranglethornJungle"] = {
-	[40005100] = "28911:D",	-- Grom'gol Base Camp
-	[51006300] = "28922:H",	-- Fort Livingston
+	[40725184] = "28911:D",	-- Grom'gol Base Camp
+	[52056356] = "28922:H",	-- Fort Livingston
 }
 
 points["SwampOfSorrows"] = {
-	[77001500] = "11781:D",	-- Bogpaddle
-	[70241573] = "28929:H",	-- Bogpaddle
+	[76771417] = "11781:D",	-- Bogpaddle (west)
+	[70241573] = "28929:H",	-- Bogpaddle (east)
 }
 
 points["TheCapeOfStranglethorn"] = {
@@ -87,20 +87,20 @@ points["TheCapeOfStranglethorn"] = {
 }
 
 points["Tirisfal"] = {
-	[57005200] = "11786:D",	-- Brill
+	[56985176] = "11786:D",	-- Brill
 }
 
 points["WesternPlaguelands"] = {
-	[29005700] = "28918:D",	-- The Bulwark
-	[43008200] = "11827:H",	-- Chillwind Camp
+	[29085647] = "28918:D",	-- The Bulwark
+	[43478233] = "11827:H",	-- Chillwind Camp
 }
 
 points["Westfall"] = {
-	[45006200] = "11583:H",	-- Moonbrook
+	[44776206] = "11583:H",	-- Moonbrook
 }
 
 points["Wetlands"] = {
-	[13004700] = "11828:H",	-- Menethil Harbour
+	[13464706] = "11828:H",	-- Menethil Harbour
 }
 
 
@@ -285,8 +285,8 @@ points["Hyjal"] = {
 }
 
 points["TwilightHighlands"] = {
-	[47002800] = "28945:H",	-- Thundermar
-	[53004600] = "28944:D",	-- Bloodgulch
+	[47262896] = "28945:H",	-- Thundermar
+	[53284644] = "28944:D",	-- Bloodgulch
 }
 
 points["Uldum"] = {
