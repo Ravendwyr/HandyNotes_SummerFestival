@@ -185,8 +185,8 @@ points["UngoroCrater"] = {
 }
 
 points["Winterspring"] = {
-	[59003500] = "11803:D",	-- Everlook
-	[62003500] = "11834:H",	-- Everlook
+	[58124719] = "11803:D",	-- Everlook (west)
+	[61244725] = "11834:H",	-- Everlook (east)
 }
 
 
