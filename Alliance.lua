@@ -108,66 +108,66 @@ points["Wetlands"] = {
 -- Kalimdor --
 --------------
 points["Ashenvale"] = {
-	[51006600] = "11765:D",	-- Silverwind Refuge
-	[87004200] = "11805:H",	-- Forest Song
+	[51606675] = "11765:D",	-- Silverwind Refuge
+	[86944186] = "11805:H",	-- Forest Song
 }
 
 points["Aszhara"] = {
-	[60005300] = "28919:D",	-- Bilgewater Harbour
+	[60415349] = "28919:D",	-- Bilgewater Harbour
 }
 
 points["AzuremystIsle"] = {
-	[44005300] = "11806:H",	-- Azure Watch
+	[44485251] = "11806:H",	-- Azure Watch
 }
 
 points["Barrens"] = {
-	[50005500] = "11783:D",	-- The Crossroads
+	[49835434] = "11783:D",	-- The Crossroads
 }
 
 points["BloodmystIsle"] = {
-	[55006900] = "11809:H",	-- Blood Watch
+	[55826789] = "11809:H",	-- Blood Watch
 }
 
 points["Darkshore"] = {
-	[49002300] = "11811:H",	-- Lor'danel
+	[48732265] = "11811:H",	-- Lor'danel
 }
 
 points["Desolace"] = {
-	[26007600] = "11769:D",	-- Silverprey Village
-	[65001700] = "11812:H",	-- Nijel's Point
+	[26217729] = "11769:D",	-- Silverprey Village
+	[66121709] = "11812:H",	-- Nijel's Point
 }
 
 points["Durotar"] = {
-	[52004700] = "11770:D",	-- Razor Hill
+	[51984719] = "11770:D",	-- Razor Hill
 }
 
 points["Dustwallow"] = {
-	[33003000] = "11771:D",	-- Brackenwall Village
-	[62004000] = "11815:H",	-- Theramore Isle
+	[33233077] = "11771:D",	-- Brackenwall Village
+	[61824046] = "11815:H",	-- Theramore Isle
 }
 
 points["Feralas"] = {
-	[47004400] = "11817:H",	-- Feathermoon Stronghold
-	[72004700] = "11773:D",	-- Camp Mojache
+	[46824370] = "11817:H",	-- Feathermoon Stronghold
+	[72424757] = "11773:D",	-- Camp Mojache
 }
 
 points["Mulgore"] = {
-	[51005900] = "11777:D",	-- Bloodhoof Village
+	[51985943] = "11777:D",	-- Bloodhoof Village
 }
 
 points["Silithus"] = {
-	[51004100] = "11800:D",	-- Cenarion Hold
-	[60003300] = "11831:H",	-- Cenarion Hold
+	[50844177] = "11800:D",	-- Cenarion Hold (south)
+	[60313351] = "11831:H",	-- Cenarion Hold (east)
 }
 
 points["SouthernBarrens"] = {
-	[48007200] = "28926:H",	-- Fort Triumph
-	[41006800] = "28914:D",	-- Desolation Point
+	[48337223] = "28926:H",	-- Fort Triumph
+	[40676730] = "28914:D",	-- Desolation Point
 }
 
 points["StonetalonMountains"] = {
-	[49005100] = "28928:H",	-- Mirkfallon Lake
-	[53006200] = "11780:D",	-- Sun Rock Retreat
+	[49305133] = "28928:H",	-- Mirkfallon Lake
+	[52976227] = "11780:D",	-- Sun Rock Retreat
 }
 
 points["Tanaris"] = {
@@ -176,12 +176,12 @@ points["Tanaris"] = {
 }
 
 points["Teldrassil"] = {
-	[54805290] = "11824:H",	-- Dolanaar
+	[54885277] = "11824:H",	-- Dolanaar
 }
 
 points["UngoroCrater"] = {
-	[56006600] = "28920:D",	-- Marshal's Stand
-	[60006300] = "28932:H",	-- Marshal's Stand
+	[56446581] = "28920:D",	-- Marshal's Stand (west)
+	[59856324] = "28932:H",	-- Marshal's Stand (east)
 }
 
 points["Winterspring"] = {
@@ -281,7 +281,7 @@ points["Deepholm"] = {
 }
 
 points["Hyjal"] = {
-	[63002300] = "29030:B",	-- Nordrassil
+	[62832271] = "29030:B",	-- Nordrassil
 }
 
 points["TwilightHighlands"] = {
@@ -290,8 +290,8 @@ points["TwilightHighlands"] = {
 }
 
 points["Uldum"] = {
-	[53003200] = "28950:H",	-- Vir'naal Oasis
-	[53003400] = "28948:D",	-- Vir'naal Oasis
+	[53603184] = "28950:H",	-- Ramkahen (north)
+	[52953461] = "28948:D",	-- Ramkahen (south)
 }
 
 points["VashjirRuins"] = {
