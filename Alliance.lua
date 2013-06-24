@@ -43,6 +43,7 @@ points["Elwynn"] = {
 }
 
 points["EversongWoods"] = {
+	[55823765] = "11935:C",	-- Stealing Silvermoon's Flame
 	[46355039] = "11772:D",	-- Falconwing Square
 }
 
@@ -67,6 +68,10 @@ points["Redridge"] = {
 	[24905338] = "11822:H",	-- Lakeshire
 }
 
+points["SilvermoonCity"] = {
+	[68984318] = "11935:C",	-- Stealing Silvermoon's Flame
+}
+
 points["Silverpine"] = {
 	[49623866] = "11580:D",	-- The Sepulcher
 }
@@ -88,6 +93,11 @@ points["TheCapeOfStranglethorn"] = {
 
 points["Tirisfal"] = {
 	[56985176] = "11786:D",	-- Brill
+	[62336682] = "9326:C",	-- Stealing the Undercity's Flame
+}
+
+points["Undercity"] = {
+	[68420836] = "9326:C",	-- Stealing the Undercity's Flame
 }
 
 points["WesternPlaguelands"] = {
@@ -152,7 +162,12 @@ points["Feralas"] = {
 }
 
 points["Mulgore"] = {
+	[35042393] = "9325:C",	-- Stealing Thunder Bluff's Flame
 	[51985943] = "11777:D",	-- Bloodhoof Village
+}
+
+points["Orgrimmar"] = {
+	[46113733] = "9324:C",	-- Stealing Orgrimmar's Flame
 }
 
 points["Silithus"] = {
@@ -177,6 +192,10 @@ points["Tanaris"] = {
 
 points["Teldrassil"] = {
 	[54885277] = "11824:H",	-- Dolanaar
+}
+
+points["ThunderBluff"] = {
+	[21282706] = "9325:C",	-- Stealing Thunder Bluff's Flame
 }
 
 points["UngoroCrater"] = {
