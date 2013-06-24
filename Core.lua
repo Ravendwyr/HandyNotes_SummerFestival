@@ -145,9 +145,18 @@ do
 		while state do -- have we reached the end of this zone?
 			if value then
 				local questID, mode = value:match("(.*):(.*)")
+				local icon
+
+				if mode == "H" or mode == "B" then -- honour the flame
+					icon = "interface\\icons\\inv_summerfest_firespirit"
+				elseif mode == "D" then -- desecrate this fire
+					icon = "interface\\icons\\spell_fire_masterofelements"
+				elseif mode == "C" then -- stealing the enemy's flame
+					icon = "interface\\icons\\spell_fire_flameshock"
+				end
 
 				if (db.completed or not IsQuestFlaggedCompleted(questID)) then
-					return state, nil, "interface\\icons\\inv_misc_firedancer_01", db.icon_scale, db.icon_alpha -- temp icon
+					return state, nil, icon, db.icon_scale, db.icon_alpha
 				end
 			end
 
