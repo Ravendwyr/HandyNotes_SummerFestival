@@ -174,7 +174,7 @@ points["Kalimdor"] = {
 	[30881998] = "11809:H",	-- Blood Watch, Bloodmyst Isle
 	[46742264] = "11811:H",	-- Lor'danel, Darkshore
 	[59312423] = "11834:H",	-- Everlook (east), Winterspring
-	[56152954] = "29030:B",	-- Nordrassil, Mount Hyjal
+	[56152954] = "29030:H",	-- Nordrassil, Mount Hyjal
 	[55383968] = "11805:H",	-- Forest Song, Ashenvale
 	[43684653] = "28928:H",	-- Mirkfallon Lake, Stonetalon Mountains
 	[42955242] = "11812:H",	-- Nijel's Point, Desolace
@@ -185,7 +185,7 @@ points["Kalimdor"] = {
 	[50958285] = "28932:H",	-- Marshal's Stand (east), Un'goro Crater
 	[44927981] = "11831:H",	-- Cenarion Hold (east), Silithus
 	[48769026] = "28950:H",	-- Ramkahen (north), Uldum
-	[34086369] = "29031:B",	-- Silver Tide Hollow, Vashj'ir Ruins
+	[34086369] = "29031:H",	-- Silver Tide Hollow, Vashj'ir Ruins
 
 	-- desecrate these fires
 	[58782422] = "11803:D",	-- Everlook (west), Winterspring
@@ -433,11 +433,11 @@ points["ZulDrak"] = {
 -- Cataclysm --
 ---------------
 points["Deepholm"] = {
-	[49405132] = "29036:B",	-- Temple of Earth
+	[49405132] = "29036:H",	-- Temple of Earth
 }
 
 points["Hyjal"] = {
-	[62832271] = "29030:B",	-- Nordrassil
+	[62832271] = "29030:H",	-- Nordrassil
 }
 
 points["TwilightHighlands"] = {
@@ -451,11 +451,11 @@ points["Uldum"] = {
 }
 
 points["Vashjir"] = {
-	[64315167] = "29031:B",	-- Silver Tide Hollow
+	[64315167] = "29031:H",	-- Silver Tide Hollow
 }
 
 points["VashjirRuins"] = {
-	[49354199] = "29031:B",	-- Silver Tide Hollow
+	[49354199] = "29031:H",	-- Silver Tide Hollow
 }
 
 
@@ -464,12 +464,12 @@ points["VashjirRuins"] = {
 --------------
 points["Pandaria"] = {
 	-- honour these flames
-	[36197488] = "32497:B",	-- Soggy's Gamble, Dread Wastes
-	[68295050] = "32498:B",	-- Dawn's Blossom, The Jade Forest
-	[59776851] = "32499:B",	-- Zhu's Watch, Krasarang Wilds
-	[53924691] = "32500:B",	-- Binan Village, Kun-Lai Summit
-	[37274134] = "32501:B",	-- Longying Outpost, Townlong Steppes
-	[52256696] = "32502:B",	-- Halfhill, Valley of the Four Winds
+	[36197488] = "32497:H",	-- Soggy's Gamble, Dread Wastes
+	[68295050] = "32498:H",	-- Dawn's Blossom, The Jade Forest
+	[59776851] = "32499:H",	-- Zhu's Watch, Krasarang Wilds
+	[53924691] = "32500:H",	-- Binan Village, Kun-Lai Summit
+	[37274134] = "32501:H",	-- Longying Outpost, Townlong Steppes
+	[52256696] = "32502:H",	-- Halfhill, Valley of the Four Winds
 	[53435182] = "32510:H",	-- Shrine of Seven Stars, Vale of Eternal Blossoms
 
 	-- desecrate these fires
@@ -478,23 +478,23 @@ points["Pandaria"] = {
 
 
 points["DreadWastes"] = {
-	[56076958] = "32497:B",	-- Soggy's Gamble
+	[56076958] = "32497:H",	-- Soggy's Gamble
 }
 
 points["Krasarang"] = {
-	[73990950] = "32499:B",	-- Zhu's Watch
+	[73990950] = "32499:H",	-- Zhu's Watch
 }
 
 points["KunLaiSummit"] = {
-	[71159087] = "32500:B",	-- Binan Village
+	[71159087] = "32500:H",	-- Binan Village
 }
 
 points["TheJadeForest"] = {
-	[47184719] = "32498:B",	-- Dawn's Blossom
+	[47184719] = "32498:H",	-- Dawn's Blossom
 }
 
 points["TownlongWastes"] = {
-	[71525629] = "32501:B",	-- Longying Outpost
+	[71525629] = "32501:H",	-- Longying Outpost
 }
 
 points["ValeofEternalBlossoms"] = {
@@ -503,5 +503,5 @@ points["ValeofEternalBlossoms"] = {
 }
 
 points["ValleyoftheFourWinds"] = {
-	[51825133] = "32502:B",	-- Halfhill
+	[51825133] = "32502:H",	-- Halfhill
 }

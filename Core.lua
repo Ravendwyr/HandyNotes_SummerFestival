@@ -147,7 +147,7 @@ do
 				local questID, mode = value:match("(.*):(.*)")
 				local icon
 
-				if mode == "H" or mode == "B" then -- honour the flame
+				if mode == "H" then -- honour the flame
 					icon = "interface\\icons\\inv_summerfest_firespirit"
 				elseif mode == "D" then -- desecrate this fire
 					icon = "interface\\icons\\spell_fire_masterofelements"
