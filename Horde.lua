@@ -173,7 +173,7 @@ points["Kalimdor"] = {
 	[43888072] = "11836:H",	-- Cenarion Hold (south), Silithus
 	[56152954] = "29030:H",	-- Nordrassil, Mount Hyjal
 	[34086369] = "29031:H",	-- Silver Tide Hollow, Vashj'ir Ruins
-	[48659073] = "28948:H",	-- Ramkahen (south), Uldum
+	[48659073] = "28949:H",	-- Ramkahen (south), Uldum
 
 	-- desecrate these fires
 	[43631230] = "11753:D",	-- Dolanaar, Teldrassil
@@ -190,7 +190,7 @@ points["Kalimdor"] = {
 	[56868163] = "11762:D",	-- Gadgetzan (east), Tanaris
 	[50958285] = "28921:D",	-- Marshal's Stand (east), Un'goro Crater
 	[44927981] = "11760:D",	-- Cenarion Hold (east), Silithus
-	[48769026] = "28950:D",	-- Ramkahen (north), Uldum
+	[48769026] = "28947:D",	-- Ramkahen (north), Uldum
 
 	-- stealing the enemy's flame
 }
@@ -424,8 +424,8 @@ points["TwilightHighlands"] = {
 }
 
 points["Uldum"] = {
-	[53603184] = "28950:D",	-- Ramkahen (north)
-	[52953461] = "28948:H",	-- Ramkahen (south)
+	[53603184] = "28947:D",	-- Ramkahen (north)
+	[52953461] = "28949:H",	-- Ramkahen (south)
 }
 
 points["Vashjir"] = {
