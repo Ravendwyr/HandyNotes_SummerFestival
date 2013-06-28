@@ -48,6 +48,8 @@ points["Azeroth"] = {
 	[56705286] = "28943:D",	-- Thundermar, Twilight Highlands
 
 	-- stealing the enemy's flame
+	[42497372] = "9330:C",	-- Stealing Stormwind's Flame
+	[47615847] = "9331:C",	-- Stealing Ironforge's Flame
 }
 
 
@@ -72,6 +74,7 @@ points["BurningSteppes"] = {
 }
 
 points["DunMorogh"] = {
+	[68682318] = "9331:C",	-- Stealing Ironforge's Flame
 	[53804523] = "11742:D",	-- Kharanos
 }
 
@@ -80,11 +83,16 @@ points["Duskwood"] = {
 }
 
 points["Elwynn"] = {
+	[19483889] = "9330:C",	-- Stealing Stormwind's Flame
 	[43476263] = "11745:D",	-- Goldshire
 }
 
 points["EversongWoods"] = {
 	[46355039] = "11848:H",	-- Falconwing Square
+}
+
+points["Ironforge"] = {
+	[64872541] = "9331:C",	-- Stealing Ironforge's Flame
 }
 
 points["Ghostlands"] = {
@@ -110,6 +118,10 @@ points["Redridge"] = {
 
 points["Silverpine"] = {
 	[49623866] = "11584:H",	-- The Sepulcher
+}
+
+points["StormwindCity"] = {
+	[49717284] = "9330:C",	-- Stealing Stormwind's Flame
 }
 
 points["StranglethornJungle"] = {
@@ -193,6 +205,8 @@ points["Kalimdor"] = {
 	[48769026] = "28947:D",	-- Ramkahen (north), Uldum
 
 	-- stealing the enemy's flame
+	[40381148] = "9332:C",	-- Stealing Darnassus' Flame
+	[29812632] = "11933:C",	-- Stealing the Exodar's Flame
 }
 
 
@@ -206,6 +220,7 @@ points["Aszhara"] = {
 }
 
 points["AzuremystIsle"] = {
+	[24623673] = "11933:C",	-- Stealing the Exodar's Flame
 	[44485251] = "11735:D",	-- Azure Watch
 }
 
@@ -219,6 +234,10 @@ points["BloodmystIsle"] = {
 
 points["Darkshore"] = {
 	[48732265] = "11740:D",	-- Lor'danel
+}
+
+points["Darnassus"] = {
+	[63664679] = "9332:C",	-- Stealing Darnassus' Flame
 }
 
 points["Desolace"] = {
@@ -265,7 +284,12 @@ points["Tanaris"] = {
 }
 
 points["Teldrassil"] = {
+	[34524759] = "9332:C",	-- Stealing Darnassus' Flame
 	[54885277] = "11753:D",	-- Dolanaar
+}
+
+points["TheExodar"] = {
+	[41242570] = "11933:C",	-- Stealing the Exodar's Flame
 }
 
 points["UngoroCrater"] = {
