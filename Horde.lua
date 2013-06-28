@@ -12,39 +12,39 @@ local points = SummerFestival.points
 ----------------------
 points["Azeroth"] = {
 	-- honour these flames
-	[55331543] = "11772:H",	-- Falconwing Square, Eversong Woods
-	[55492166] = "11774:H",	-- Tranquillien, Ghostlands
-	[43483277] = "11786:H",	-- Brill, Tirisfal Glade
-	[41253901] = "11580:H",	-- The Sepulcher, Silverpine Forest
-	[46653473] = "28918:H",	-- The Bulwark, Western Plaguelands
-	[55714281] = "11784:H",	-- Revantusk Village, The Hinterlands
-	[53274535] = "11764:H",	-- Hammerfall, Arathi Highlands
-	[46574167] = "11776:H",	-- Tarren Mill, Hillsbrad Foothills
-	[51096553] = "11766:H",	-- New Kargath, Badlands
-	[51708143] = "28917:H",	-- Dreadmaul Hold, Blasted Lands
-	[49736915] = "11768:H",	-- Flame Crest, Burning Steppes
-	[54447716] = "11781:H",	-- Bogpaddle (east), Swamp of Sorrows
-	[44428696] = "28911:H",	-- Grom'gol Base Camp, Northern Stranglethorn
-	[44329412] = "11801:H",	-- Wild Shore (south), Southern Stranglethorn
+	[55331543] = "11848:H",	-- Falconwing Square, Eversong Woods
+	[55492166] = "11850:H",	-- Tranquillien, Ghostlands
+	[43483277] = "11862:H",	-- Brill, Tirisfal Glade
+	[41253901] = "11584:H",	-- The Sepulcher, Silverpine Forest
+	[46653473] = "28931:H",	-- The Bulwark, Western Plaguelands
+	[55714281] = "11860:H",	-- Revantusk Village, The Hinterlands
+	[53274535] = "11840:H",	-- Hammerfall, Arathi Highlands
+	[46574167] = "11853:H",	-- Tarren Mill, Hillsbrad Foothills
+	[51096553] = "11842:H",	-- New Kargath, Badlands
+	[51708143] = "28930:H",	-- Dreadmaul Hold, Blasted Lands
+	[49736915] = "11844:H",	-- Flame Crest, Burning Steppes
+	[54447716] = "11857:H",	-- Bogpaddle (east), Swamp of Sorrows
+	[44428696] = "28924:H",	-- Grom'gol Base Camp, Northern Stranglethorn
+	[44329412] = "11837:H",	-- Wild Shore (south), Southern Stranglethorn
 	[57485512] = "28944:H",	-- Bloodgulch, Twilight Highlands
 
 	-- desecrate these fires
-	[51154562] = "11804:D",	-- Refuge Pointe, Arathi Highlands
-	[49824050] = "11826:D",	-- Aerie Peak, The Hinterlands
-	[48173746] = "11827:D",	-- Chillwind Camp, Western Plaguelands
-	[46935386] = "11828:D",	-- Menethil Harbour, Wetlands
-	[45836112] = "11813:D",	-- Kharanos, Dun Morogh
-	[51706047] = "11820:D",	-- Thelsamar, Loch Modan
-	[50706696] = "28925:D",	-- Dragon's Mouth, Badlands
-	[41048112] = "11583:D",	-- Moonbrook, Westfall
-	[44547575] = "11816:D",	-- Goldshire, Elwynn Forest
-	[49807589] = "11822:D",	-- Lakeshire, Redridge
-	[47448058] = "11814:D",	-- Darkshire, Duskwood
-	[52538149] = "11808:D",	-- Nethergarde Keep, Blasted Lands
-	[51037159] = "11810:D",	-- Morgan's Vigil, Burning Steppes
-	[54047726] = "28929:D",	-- Bogpaddle (west), Swamp of Sorrows
-	[45568814] = "28922:D",	-- Fort Livingston, Northern Stranglethorn
-	[44469382] = "11832:D",	-- Wild Shore (north), Southern Stranglethorn
+	[51154562] = "11732:D",	-- Refuge Pointe, Arathi Highlands
+	[49824050] = "11755:D",	-- Aerie Peak, The Hinterlands
+	[48173746] = "11756:D",	-- Chillwind Camp, Western Plaguelands
+	[46935386] = "11757:D",	-- Menethil Harbour, Wetlands
+	[45836112] = "11742:D",	-- Kharanos, Dun Morogh
+	[51706047] = "11749:D",	-- Thelsamar, Loch Modan
+	[50706696] = "28912:D",	-- Dragon's Mouth, Badlands
+	[41048112] = "11581:D",	-- Moonbrook, Westfall
+	[44547575] = "11744:D",	-- Goldshire, Elwynn Forest
+	[49807589] = "11751:D",	-- Lakeshire, Redridge
+	[47448058] = "11743:D",	-- Darkshire, Duskwood
+	[52538149] = "11737:D",	-- Nethergarde Keep, Blasted Lands
+	[51037159] = "11739:D",	-- Morgan's Vigil, Burning Steppes
+	[54047726] = "28916:D",	-- Bogpaddle (west), Swamp of Sorrows
+	[45568814] = "28910:D",	-- Fort Livingston, Northern Stranglethorn
+	[44469382] = "11761:D",	-- Wild Shore (north), Southern Stranglethorn
 	[56705286] = "28945:D",	-- Thundermar, Twilight Highlands
 
 	-- stealing the enemy's flame
@@ -52,103 +52,103 @@ points["Azeroth"] = {
 
 
 points["Arathi"] = {
-	[44304603] = "11804:D",	-- Refuge Pointe
-	[69084286] = "11764:H",	-- Hammerfall
+	[44304603] = "11732:D",	-- Refuge Pointe
+	[69084286] = "11840:H",	-- Hammerfall
 }
 
 points["Badlands"] = {
-	[19005618] = "28925:D",	-- Dragon's Mouth
-	[24113722] = "11766:H",	-- New Kargath
+	[19005618] = "28912:D",	-- Dragon's Mouth
+	[24113722] = "11842:H",	-- New Kargath
 }
 
 points["BlastedLands"] = {
-	[46361426] = "28917:H",	-- Dreadmaul Hold
-	[55531488] = "11808:D",	-- Nethergarde Keep
+	[46361426] = "28930:H",	-- Dreadmaul Hold
+	[55531488] = "11737:D",	-- Nethergarde Keep
 }
 
 points["BurningSteppes"] = {
-	[51532918] = "11768:H",	-- Flame Crest
-	[68346064] = "11810:D",	-- Morgan's Vigil
+	[51532918] = "11844:H",	-- Flame Crest
+	[68346064] = "11739:D",	-- Morgan's Vigil
 }
 
 points["DunMorogh"] = {
-	[53804523] = "11813:D",	-- Kharanos
+	[53804523] = "11742:D",	-- Kharanos
 }
 
 points["Duskwood"] = {
-	[73695462] = "11814:D",	-- Darkshire
+	[73695462] = "11743:D",	-- Darkshire
 }
 
 points["Elwynn"] = {
-	[43476263] = "11816:D",	-- Goldshire
+	[43476263] = "11745:D",	-- Goldshire
 }
 
 points["EversongWoods"] = {
-	[46355039] = "11772:H",	-- Falconwing Square
+	[46355039] = "11848:H",	-- Falconwing Square
 }
 
 points["Ghostlands"] = {
-	[47052593] = "11774:H",	-- Tranquillien
+	[47052593] = "11850:H",	-- Tranquillien
 }
 
 points["HillsbradFoothills"] = {
-	[54504989] = "11776:H",	-- Tarren Mill
+	[54504989] = "11853:H",	-- Tarren Mill
 }
 
 points["Hinterlands"] = {
-	[14345007] = "11826:D",	-- Aerie Peak
-	[76637455] = "11784:H",	-- Revantusk Village
+	[14345007] = "11755:D",	-- Aerie Peak
+	[76637455] = "11860:H",	-- Revantusk Village
 }
 
 points["LochModan"] = {
-	[32554095] = "11820:D",	-- Thelsamar
+	[32554095] = "11749:D",	-- Thelsamar
 }
 
 points["Redridge"] = {
-	[24905338] = "11822:D",	-- Lakeshire
+	[24905338] = "11751:D",	-- Lakeshire
 }
 
 points["Silverpine"] = {
-	[49623866] = "11580:H",	-- The Sepulcher
+	[49623866] = "11584:H",	-- The Sepulcher
 }
 
 points["StranglethornJungle"] = {
-	[40725184] = "28911:H",	-- Grom'gol Base Camp
-	[52056356] = "28922:D",	-- Fort Livingston
+	[40725184] = "28924:H",	-- Grom'gol Base Camp
+	[52056356] = "28910:D",	-- Fort Livingston
 }
 
 points["StranglethornVale"] = {
-	[44303363] = "28911:H",	-- Grom'gol Base Camp, Northern Stranglethorn
-	[53194096] = "28922:D",	-- Fort Livingston, Northern Stranglethorn
-	[44567626] = "11832:D",	-- Wild Shore (north), Southern Stranglethorn
-	[43707810] = "11801:H",	-- Wild Shore (south), Southern Stranglethorn
+	[44303363] = "28924:H",	-- Grom'gol Base Camp, Northern Stranglethorn
+	[53194096] = "28910:D",	-- Fort Livingston, Northern Stranglethorn
+	[44567626] = "11761:D",	-- Wild Shore (north), Southern Stranglethorn
+	[43707810] = "11837:H",	-- Wild Shore (south), Southern Stranglethorn
 }
 
 points["SwampOfSorrows"] = {
-	[76771417] = "11781:H",	-- Bogpaddle (west)
-	[70241573] = "28929:D",	-- Bogpaddle (east)
+	[76771417] = "11857:H",	-- Bogpaddle (west)
+	[70241573] = "28916:D",	-- Bogpaddle (east)
 }
 
 points["TheCapeOfStranglethorn"] = {
-	[50547069] = "11801:H",	-- Wild Shore (south)
-	[51976764] = "11832:D",	-- Wild Shore (north)
+	[50547069] = "11837:H",	-- Wild Shore (south)
+	[51976764] = "11761:D",	-- Wild Shore (north)
 }
 
 points["Tirisfal"] = {
-	[56985176] = "11786:H",	-- Brill
+	[56985176] = "11862:H",	-- Brill
 }
 
 points["WesternPlaguelands"] = {
-	[29085647] = "28918:H",	-- The Bulwark
-	[43478233] = "11827:D",	-- Chillwind Camp
+	[29085647] = "28931:H",	-- The Bulwark
+	[43478233] = "11756:D",	-- Chillwind Camp
 }
 
 points["Westfall"] = {
-	[44776206] = "11583:D",	-- Moonbrook
+	[44776206] = "11581:D",	-- Moonbrook
 }
 
 points["Wetlands"] = {
-	[13464706] = "11828:D",	-- Menethil Harbour
+	[13464706] = "11757:D",	-- Menethil Harbour
 }
 
 
