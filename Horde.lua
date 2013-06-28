@@ -284,59 +284,59 @@ points["Winterspring"] = {
 -------------
 points["Expansion01"] = {
 	-- honour these flames
-	[59614963] = "11775:H",	-- Thrallmar, Hellfire Peninsula
-	[49917196] = "11782:H",	-- Stonebreaker Hold, Terokkar Forest
-	[30404830] = "11787:H",	-- Zabra'jin, Zangarmarsh
-	[31636038] = "11778:H",	-- Garadar, Nagrand
-	[60787627] = "11779:H",	-- Shadowmoon Village, Shadowmoon Valley
-	[39313047] = "11767:H",	-- Thunderlord Stronghold, Blade's Edge Mountain
-	[53332495] = "11799:H",	-- Area 52 (south), Netherstorm
+	[59614963] = "11851:H",	-- Thrallmar, Hellfire Peninsula
+	[49917196] = "11858:H",	-- Stonebreaker Hold, Terokkar Forest
+	[30404830] = "11863:H",	-- Zabra'jin, Zangarmarsh
+	[31636038] = "11854:H",	-- Garadar, Nagrand
+	[60787627] = "11855:H",	-- Shadowmoon Village, Shadowmoon Valley
+	[39313047] = "11843:H",	-- Thunderlord Stronghold, Blade's Edge Mountains
+	[53332495] = "11835:H",	-- Area 52 (south), Netherstorm
 
 	-- desecrate these fires
-	[61085452] = "11818:D",	-- Honour Hold, Hellfire Peninsula
-	[50577576] = "11825:D",	-- Allerian Stronghold, Terokkar Forest
-	[39964833] = "11829:D",	-- Telredor, Zangarmarsh
-	[31167162] = "11821:D",	-- Telaar, Nagrand
-	[62708394] = "11823:D",	-- Wildhammer Stronghold, Shadowmoon Valley
-	[36683261] = "11807:D",	-- Sylvanaar, Blade's Edge Mountain
-	[52982314] = "11830:D",	-- Area 52 (north-west), Netherstorm
+	[61085452] = "11747:D",	-- Honour Hold, Hellfire Peninsula
+	[50577576] = "11754:D",	-- Allerian Stronghold, Terokkar Forest
+	[39964833] = "11758:D",	-- Telredor, Zangarmarsh
+	[31167162] = "11750:D",	-- Telaar, Nagrand
+	[62708394] = "11752:D",	-- Wildhammer Stronghold, Shadowmoon Valley
+	[36683261] = "11736:D",	-- Sylvanaar, Blade's Edge Mountains
+	[52982314] = "11759:D",	-- Area 52 (north-west), Netherstorm
 
 }
 
 
 points["BladesEdgeMountains"] = {
-	[41576590] = "11807:D",	-- Sylvanaar
-	[50045902] = "11767:H",	-- Thunderlord Stronghold
+	[41576590] = "11736:D",	-- Sylvanaar
+	[50045902] = "11843:H",	-- Thunderlord Stronghold
 }
 
 points["Hellfire"] = {
-	[57194175] = "11775:H",	-- Thrallmar
-	[62175829] = "11818:D",	-- Honour Hold
+	[57194175] = "11851:H",	-- Thrallmar
+	[62175829] = "11747:D",	-- Honour Hold
 }
 
 points["Nagrand"] = {
-	[49616946] = "11821:D",	-- Telaar
-	[51103396] = "11778:H",	-- Garadar
+	[49616946] = "11750:D",	-- Telaar
+	[51103396] = "11854:H",	-- Garadar
 }
 
 points["Netherstorm"] = {
-	[31216266] = "11830:D",	-- Area 52 (north-west)
-	[32306833] = "11799:H",	-- Area 52 (south)
+	[31216266] = "11759:D",	-- Area 52 (north-west)
+	[32306833] = "11835:H",	-- Area 52 (south)
 }
 
 points["ShadowmoonValley"] = {
-	[33533028] = "11779:H",	-- Shadowmoon Village
-	[39625464] = "11823:D",	-- Wildhammer Stronghold
+	[33533028] = "11855:H",	-- Shadowmoon Village
+	[39625464] = "11752:D",	-- Wildhammer Stronghold
 }
 
 points["TerokkarForest"] = {
-	[51934324] = "11782:H",	-- Stonebreaker Hold
-	[54065552] = "11825:D",	-- Allerian Stronghold
+	[51934324] = "11858:H",	-- Stonebreaker Hold
+	[54065552] = "11754:D",	-- Allerian Stronghold
 }
 
 points["Zangarmarsh"] = {
-	[35585182] = "11787:H",	-- Zabra'jin
-	[68795195] = "11829:D",	-- Telredor
+	[35585182] = "11863:H",	-- Zabra'jin
+	[68795195] = "11758:D",	-- Telredor
 }
 
 
