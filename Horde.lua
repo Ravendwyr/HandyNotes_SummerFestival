@@ -171,6 +171,8 @@ points["Kalimdor"] = {
 	[56328122] = "11802:H",	-- Gadgetzan (west), Tanaris
 	[50608311] = "28920:H",	-- Marshal's Stand (west), Un'goro Crater
 	[43888072] = "11800:H",	-- Cenarion Hold (south), Silithus
+	[56152954] = "29030:H",	-- Nordrassil, Mount Hyjal
+	[34086369] = "29031:H",	-- Silver Tide Hollow, Vashj'ir Ruins
 	[48659073] = "28948:H",	-- Ramkahen (south), Uldum
 
 	-- desecrate these fires
@@ -179,7 +181,6 @@ points["Kalimdor"] = {
 	[30881998] = "11809:D",	-- Blood Watch, Bloodmyst Isle
 	[46742264] = "11811:D",	-- Lor'danel, Darkshore
 	[59312423] = "11834:D",	-- Everlook (east), Winterspring
-	[56152954] = "29030:H",	-- Nordrassil, Mount Hyjal
 	[55383968] = "11805:D",	-- Forest Song, Ashenvale
 	[43684653] = "28928:D",	-- Mirkfallon Lake, Stonetalon Mountains
 	[42955242] = "11812:D",	-- Nijel's Point, Desolace
@@ -190,7 +191,6 @@ points["Kalimdor"] = {
 	[50958285] = "28932:D",	-- Marshal's Stand (east), Un'goro Crater
 	[44927981] = "11831:D",	-- Cenarion Hold (east), Silithus
 	[48769026] = "28950:D",	-- Ramkahen (north), Uldum
-	[34086369] = "29031:H",	-- Silver Tide Hollow, Vashj'ir Ruins
 
 	-- stealing the enemy's flame
 }
