@@ -26,7 +26,7 @@ points["Azeroth"] = {
 	[54447716] = "11857:H",	-- Bogpaddle (east), Swamp of Sorrows
 	[44428696] = "28924:H",	-- Grom'gol Base Camp, Northern Stranglethorn
 	[44329412] = "11837:H",	-- Wild Shore (south), Southern Stranglethorn
-	[57485512] = "28944:H",	-- Bloodgulch, Twilight Highlands
+	[57485512] = "28946:H",	-- Bloodgulch, Twilight Highlands
 
 	-- desecrate these fires
 	[51154562] = "11732:D",	-- Refuge Pointe, Arathi Highlands
@@ -45,7 +45,7 @@ points["Azeroth"] = {
 	[54047726] = "28916:D",	-- Bogpaddle (west), Swamp of Sorrows
 	[45568814] = "28910:D",	-- Fort Livingston, Northern Stranglethorn
 	[44469382] = "11761:D",	-- Wild Shore (north), Southern Stranglethorn
-	[56705286] = "28945:D",	-- Thundermar, Twilight Highlands
+	[56705286] = "28943:D",	-- Thundermar, Twilight Highlands
 
 	-- stealing the enemy's flame
 }
@@ -419,8 +419,8 @@ points["Hyjal"] = {
 }
 
 points["TwilightHighlands"] = {
-	[47262896] = "28945:D",	-- Thundermar
-	[53284644] = "28944:H",	-- Bloodgulch
+	[47262896] = "28943:D",	-- Thundermar
+	[53284644] = "28946:H",	-- Bloodgulch
 }
 
 points["Uldum"] = {
