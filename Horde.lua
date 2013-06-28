@@ -157,39 +157,39 @@ points["Wetlands"] = {
 --------------
 points["Kalimdor"] = {
 	-- honour these flames
-	[58782422] = "11803:H",	-- Everlook (west), Winterspring
-	[64603826] = "28919:H",	-- Bilgewater Harbour, Azshara
-	[59185158] = "11770:H",	-- Razor Hill, Durotar
-	[49844358] = "11765:H",	-- Silverwind Refuge, Ashenvale
-	[53615328] = "11783:H",	-- The Crossroads, Northern Barrens
-	[44274828] = "11780:H",	-- Sun Rock Retreat, Stonetalon Mountains
-	[38085978] = "11769:H",	-- Silverprey Village, Desolace
-	[48096166] = "11777:H",	-- Bloodhoof Village, Mulgore
-	[50886490] = "28914:H",	-- Desolation Point, Southern Barrens
-	[53776485] = "11771:H",	-- Brackenwall Village, Dustwallow Marsh
-	[45277080] = "11773:H",	-- Camp Mojache, Feralas
-	[56328122] = "11802:H",	-- Gadgetzan (west), Tanaris
-	[50608311] = "28920:H",	-- Marshal's Stand (west), Un'goro Crater
-	[43888072] = "11800:H",	-- Cenarion Hold (south), Silithus
+	[58782422] = "11839:H",	-- Everlook (west), Winterspring
+	[64603826] = "28923:H",	-- Bilgewater Harbour, Azshara
+	[59185158] = "11846:H",	-- Razor Hill, Durotar
+	[49844358] = "11841:H",	-- Silverwind Refuge, Ashenvale
+	[53615328] = "11859:H",	-- The Crossroads, Northern Barrens
+	[44274828] = "11856:H",	-- Sun Rock Retreat, Stonetalon Mountains
+	[38085978] = "11845:H",	-- Silverprey Village, Desolace
+	[48096166] = "11852:H",	-- Bloodhoof Village, Mulgore
+	[50886490] = "28927:H",	-- Desolation Point, Southern Barrens
+	[53776485] = "11847:H",	-- Brackenwall Village, Dustwallow Marsh
+	[45277080] = "11849:H",	-- Camp Mojache, Feralas
+	[56328122] = "11838:H",	-- Gadgetzan (west), Tanaris
+	[50608311] = "28933:H",	-- Marshal's Stand (west), Un'goro Crater
+	[43888072] = "11836:H",	-- Cenarion Hold (south), Silithus
 	[56152954] = "29030:H",	-- Nordrassil, Mount Hyjal
 	[34086369] = "29031:H",	-- Silver Tide Hollow, Vashj'ir Ruins
 	[48659073] = "28948:H",	-- Ramkahen (south), Uldum
 
 	-- desecrate these fires
-	[43631230] = "11824:D",	-- Dolanaar, Teldrassil
-	[32002807] = "11806:D",	-- Azure Watch, Azuremyst Isle
-	[30881998] = "11809:D",	-- Blood Watch, Bloodmyst Isle
-	[46742264] = "11811:D",	-- Lor'danel, Darkshore
-	[59312423] = "11834:D",	-- Everlook (east), Winterspring
-	[55383968] = "11805:D",	-- Forest Song, Ashenvale
-	[43684653] = "28928:D",	-- Mirkfallon Lake, Stonetalon Mountains
-	[42955242] = "11812:D",	-- Nijel's Point, Desolace
-	[54236589] = "28926:D",	-- Fort Triumph, Southern Barrens
-	[57856623] = "11815:D",	-- Theramore Isle, Dustwallow Marsh
-	[40437007] = "11817:D",	-- Feathermoon Stronghold, Feralas
-	[56868163] = "11833:D",	-- Gadgetzan (east), Tanaris
-	[50958285] = "28932:D",	-- Marshal's Stand (east), Un'goro Crater
-	[44927981] = "11831:D",	-- Cenarion Hold (east), Silithus
+	[43631230] = "11753:D",	-- Dolanaar, Teldrassil
+	[32002807] = "11735:D",	-- Azure Watch, Azuremyst Isle
+	[30881998] = "11738:D",	-- Blood Watch, Bloodmyst Isle
+	[46742264] = "11740:D",	-- Lor'danel, Darkshore
+	[59312423] = "11763:D",	-- Everlook (east), Winterspring
+	[55383968] = "11734:D",	-- Forest Song, Ashenvale
+	[43684653] = "28915:D",	-- Mirkfallon Lake, Stonetalon Mountains
+	[42955242] = "11741:D",	-- Nijel's Point, Desolace
+	[54236589] = "28913:D",	-- Fort Triumph, Southern Barrens
+	[57856623] = "11744:D",	-- Theramore Isle, Dustwallow Marsh
+	[40437007] = "11746:D",	-- Feathermoon Stronghold, Feralas
+	[56868163] = "11762:D",	-- Gadgetzan (east), Tanaris
+	[50958285] = "28921:D",	-- Marshal's Stand (east), Un'goro Crater
+	[44927981] = "11760:D",	-- Cenarion Hold (east), Silithus
 	[48769026] = "28950:D",	-- Ramkahen (north), Uldum
 
 	-- stealing the enemy's flame
@@ -197,85 +197,85 @@ points["Kalimdor"] = {
 
 
 points["Ashenvale"] = {
-	[51606675] = "11765:H",	-- Silverwind Refuge
-	[86944186] = "11805:D",	-- Forest Song
+	[51606675] = "11841:H",	-- Silverwind Refuge
+	[86944186] = "11734:D",	-- Forest Song
 }
 
 points["Aszhara"] = {
-	[60415349] = "28919:H",	-- Bilgewater Harbour
+	[60415349] = "28923:H",	-- Bilgewater Harbour
 }
 
 points["AzuremystIsle"] = {
-	[44485251] = "11806:D",	-- Azure Watch
+	[44485251] = "11735:D",	-- Azure Watch
 }
 
 points["Barrens"] = {
-	[49835434] = "11783:H",	-- The Crossroads
+	[49835434] = "11859:H",	-- The Crossroads
 }
 
 points["BloodmystIsle"] = {
-	[55826789] = "11809:D",	-- Blood Watch
+	[55826789] = "11738:D",	-- Blood Watch
 }
 
 points["Darkshore"] = {
-	[48732265] = "11811:D",	-- Lor'danel
+	[48732265] = "11740:D",	-- Lor'danel
 }
 
 points["Desolace"] = {
-	[26217729] = "11769:H",	-- Silverprey Village
-	[66121709] = "11812:D",	-- Nijel's Point
+	[26217729] = "11845:H",	-- Silverprey Village
+	[66121709] = "11741:D",	-- Nijel's Point
 }
 
 points["Durotar"] = {
-	[51984719] = "11770:H",	-- Razor Hill
+	[51984719] = "11846:H",	-- Razor Hill
 }
 
 points["Dustwallow"] = {
-	[33233077] = "11771:H",	-- Brackenwall Village
-	[61824046] = "11815:D",	-- Theramore Isle
+	[33233077] = "11847:H",	-- Brackenwall Village
+	[61824046] = "11744:D",	-- Theramore Isle
 }
 
 points["Feralas"] = {
-	[46824370] = "11817:D",	-- Feathermoon Stronghold
-	[72424757] = "11773:H",	-- Camp Mojache
+	[46824370] = "11746:D",	-- Feathermoon Stronghold
+	[72424757] = "11849:H",	-- Camp Mojache
 }
 
 points["Mulgore"] = {
-	[51985943] = "11777:H",	-- Bloodhoof Village
+	[51985943] = "11852:H",	-- Bloodhoof Village
 }
 
 points["Silithus"] = {
-	[50844177] = "11800:H",	-- Cenarion Hold (south)
-	[60313351] = "11831:D",	-- Cenarion Hold (east)
+	[50844177] = "11836:H",	-- Cenarion Hold (south)
+	[60313351] = "11760:D",	-- Cenarion Hold (east)
 }
 
 points["SouthernBarrens"] = {
-	[48337223] = "28926:D",	-- Fort Triumph
-	[40676730] = "28914:H",	-- Desolation Point
+	[48337223] = "28913:D",	-- Fort Triumph
+	[40676730] = "28927:H",	-- Desolation Point
 }
 
 points["StonetalonMountains"] = {
-	[49305133] = "28928:D",	-- Mirkfallon Lake
-	[52976227] = "11780:H",	-- Sun Rock Retreat
+	[49305133] = "28915:D",	-- Mirkfallon Lake
+	[52976227] = "11856:H",	-- Sun Rock Retreat
 }
 
 points["Tanaris"] = {
-	[49842817] = "11802:H",	-- Gadgetzan (west)
-	[52643026] = "11833:D",	-- Gadgetzan (east)
+	[49842817] = "11838:H",	-- Gadgetzan (west)
+	[52643026] = "11762:D",	-- Gadgetzan (east)
 }
 
 points["Teldrassil"] = {
-	[54885277] = "11824:D",	-- Dolanaar
+	[54885277] = "11753:D",	-- Dolanaar
 }
 
 points["UngoroCrater"] = {
-	[56446581] = "28920:H",	-- Marshal's Stand (west)
-	[59856324] = "28932:D",	-- Marshal's Stand (east)
+	[56446581] = "28933:H",	-- Marshal's Stand (west)
+	[59856324] = "28921:D",	-- Marshal's Stand (east)
 }
 
 points["Winterspring"] = {
-	[58124719] = "11803:H",	-- Everlook (west)
-	[61244725] = "11834:D",	-- Everlook (east)
+	[58124719] = "11839:H",	-- Everlook (west)
+	[61244725] = "11763:D",	-- Everlook (east)
 }
 
 
