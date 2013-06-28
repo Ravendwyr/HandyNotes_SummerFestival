@@ -345,65 +345,65 @@ points["Zangarmarsh"] = {
 ---------------
 points["Northrend"] = {
 	-- honour these flames
-	[20215198] = "13441:H",	-- Bor'gorok Outpost, Borean Tundra
-	[24514305] = "13450:H",	-- River's Heart (north), Sholazar Basin
-	[43665765] = "13451:H",	-- Agmar's Hammer, Dragonblight
-	[76276773] = "13453:H",	-- Camp Winterhoof, Howling Fjord
-	[63826108] = "13454:H",	-- Conquest Hold, Grizzly Hills
-	[57713763] = "13455:H",	-- K3 (west), The Storm Peaks
-	[56134264] = "13457:H",	-- Sunreaver's Command, Crystalsong Forest
-	[67484476] = "13458:H",	-- The Argent Stand (south-east), Zul'Drak
+	[20215198] = "13493:H",	-- Bor'gorok Outpost, Borean Tundra
+	[24514305] = "13494:H",	-- River's Heart (north), Sholazar Basin
+	[43665765] = "13495:H",	-- Agmar's Hammer, Dragonblight
+	[76276773] = "13496:H",	-- Camp Winterhoof, Howling Fjord
+	[63826108] = "13497:H",	-- Conquest Hold, Grizzly Hills
+	[57713763] = "13498:H",	-- K3 (west), The Storm Peaks
+	[56134264] = "13499:H",	-- Sunreaver's Command, Crystalsong Forest
+	[67484476] = "13500:H",	-- The Argent Stand (south-east), Zul'Drak
 
 	-- desecrate these fires
-	[21535461] = "13485:D",	-- Fizzcrank Airstrip, Borean Tundra
-	[24694422] = "13486:D",	-- River's Heart (south), Sholazar Basin
-	[55285625] = "13487:D",	-- Wintergarde Keep, Dragonblight
-	[79496867] = "13488:D",	-- Fort Wildervar, Howling Fjord
-	[68216078] = "13489:D",	-- Amberpine Lodge, Grizzly Hills
-	[58153808] = "13490:D",	-- K3 (east), The Storm Peaks
-	[55784606] = "13491:D",	-- Windrunner's Overlook, Crystalsong Forest
-	[66664196] = "13492:D",	-- The Argent Stand (north), Zul'Drak
+	[21535461] = "13440:D",	-- Fizzcrank Airstrip, Borean Tundra
+	[24694422] = "13442:D",	-- River's Heart (south), Sholazar Basin
+	[55285625] = "13443:D",	-- Wintergarde Keep, Dragonblight
+	[79496867] = "13444:D",	-- Fort Wildervar, Howling Fjord
+	[68216078] = "13445:D",	-- Amberpine Lodge, Grizzly Hills
+	[58153808] = "13446:D",	-- K3 (east), The Storm Peaks
+	[55784606] = "13447:D",	-- Windrunner's Overlook, Crystalsong Forest
+	[66664196] = "13449:D",	-- The Argent Stand (north), Zul'Drak
 }
 
 
 points["BoreanTundra"] = {
-	[51031186] = "13441:H",	-- Bor'gorok Outpost
-	[55101995] = "13485:D",	-- Fizzcrank Airstrip
+	[51031186] = "13493:H",	-- Bor'gorok Outpost
+	[55101995] = "13440:D",	-- Fizzcrank Airstrip
 }
 
 points["CrystalsongForest"] = {
-	[78197495] = "13491:D",	-- Windrunner's Overlook
-	[80435263] = "13457:H",	-- Sunreaver's Command
+	[78197495] = "13447:D",	-- Windrunner's Overlook
+	[80435263] = "13499:H",	-- Sunreaver's Command
 }
 
 points["Dragonblight"] = {
-	[38524824] = "13451:H",	-- Agmar's Hammer
-	[75294380] = "13487:D",	-- Wintergarde Keep
+	[38524824] = "13495:H",	-- Agmar's Hammer
+	[75294380] = "13443:D",	-- Wintergarde Keep
 }
 
 points["GrizzlyHills"] = {
-	[19086149] = "13454:H",	-- Conquest Hold
-	[33906045] = "13489:D",	-- Amberpine Lodge
+	[19086149] = "13497:H",	-- Conquest Hold
+	[33906045] = "13445:D",	-- Amberpine Lodge
 }
 
 points["HowlingFjord"] = {
-	[48371337] = "13453:H",	-- Camp Winterhoof
-	[57811611] = "13488:D",	-- Fort Wildervar
+	[48371337] = "13496:H",	-- Camp Winterhoof
+	[57811611] = "13444:D",	-- Fort Wildervar
 }
 
 points["SholazarBasin"] = {
-	[47366158] = "13450:H",	-- River's Heart (north)
-	[48096636] = "13486:D",	-- River's Heart (south)
+	[47366158] = "13494:H",	-- River's Heart (north)
+	[48096636] = "13442:D",	-- River's Heart (south)
 }
 
 points["TheStormPeaks"] = {
-	[40338558] = "13455:H",	-- K3 (west)
-	[41448669] = "13490:D",	-- K3 (east)
+	[40338558] = "13498:H",	-- K3 (west)
+	[41448669] = "13446:D",	-- K3 (east)
 }
 
 points["ZulDrak"] = {
-	[43307127] = "13458:H",	-- The Argent Stand (south-east)
-	[40386130] = "13492:D",	-- The Argent Stand (north)
+	[43307127] = "13500:H",	-- The Argent Stand (south-east)
+	[40386130] = "13449:D",	-- The Argent Stand (north)
 }
 
 
