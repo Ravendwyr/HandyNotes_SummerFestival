@@ -20,6 +20,7 @@ local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha =
 -- upvalues
 local _G = getfenv(0)
 
+local CalendarGetDate = _G.CalendarGetDate
 local CloseDropDownMenus = _G.CloseDropDownMenus
 local GameTooltip = _G.GameTooltip
 local gsub = _G.string.gsub
@@ -219,10 +220,16 @@ local options = {
 
 -- initialise
 function SummerFestival:OnEnable()
-	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
-	self:RegisterEvent("QUEST_FINISHED", "Refresh")
+	local _, month, day = CalendarGetDate()
 
-	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
+	if ( month == 6 and day >= 21 ) or ( month == 7 and day <= 4 ) then
+		HandyNotes:RegisterPluginDB("SummerFestival", self, options)
+		self:RegisterEvent("QUEST_FINISHED", "Refresh")
+
+		db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
+	else
+		self:Disable()
+	end
 end
 
 function SummerFestival:Refresh()
