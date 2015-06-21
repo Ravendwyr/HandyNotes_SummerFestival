@@ -167,7 +167,7 @@ do
 		local state, value = next(t, prestate)
 
 		while state do -- have we reached the end of this zone?
-			local questID, mode = value:match("(.*):(.*)")
+			local questID, mode = value:match("(%d+):(.*)")
 			local icon
 
 			if mode == "H" then -- honour the flame
@@ -204,7 +204,7 @@ do
 				state, value = next(data, prestate)
 
 				while state do -- have we reached the end of this zone?
-					local questID, mode = value:match("(.*):(.*)")
+					local questID, mode = value:match("(%d+):(.*)")
 					local icon
 
 					if mode == "H" then -- honour the flame
