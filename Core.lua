@@ -135,39 +135,103 @@ do
 end
 
 do
+	local continentMapFile = {
+		["Kalimdor"]              = {__index = Astrolabe.ContinentList[1]},
+		["Azeroth"]               = {__index = Astrolabe.ContinentList[2]}, -- Eastern Kingdoms
+		["Expansion01"]           = {__index = Astrolabe.ContinentList[3]}, -- Outland
+		["Northrend"]             = {__index = Astrolabe.ContinentList[4]},
+		["TheMaelstromContinent"] = {__index = Astrolabe.ContinentList[5]},
+		["Vashjir"]               = {[0] = 613, 614, 615, 610},
+		["Pandaria"]              = {__index = Astrolabe.ContinentList[6]},
+		["Draenor"]               = {__index = Astrolabe.ContinentList[7]},
+	}
+
+	for k, v in pairs(continentMapFile) do
+		setmetatable(v, v)
+	end
+
 	-- custom iterator we use to iterate over every node in a given zone
 	local function iter(t, prestate)
+		if not SummerFestival.isEnabled then return nil end
 		if not t then return nil end
 
 		local state, value = next(t, prestate)
 
 		while state do -- have we reached the end of this zone?
-			if value then
-				local questID, mode = value:match("(.*):(.*)")
-				local icon
+			local questID, mode = value:match("(.*):(.*)")
+			local icon
 
-				if mode == "H" then -- honour the flame
-					icon = "interface\\icons\\inv_summerfest_firespirit"
-				elseif mode == "D" then -- desecrate this fire
-					icon = "interface\\icons\\spell_fire_masterofelements"
-				elseif mode == "C" then -- stealing the enemy's flame
-					icon = "interface\\icons\\spell_fire_flameshock"
-				end
-
-				if (db.completed or not IsQuestFlaggedCompleted(questID)) then
-					return state, nil, icon, db.icon_scale, db.icon_alpha
-				end
+			if mode == "H" then -- honour the flame
+				icon = "interface\\icons\\inv_summerfest_firespirit"
+			elseif mode == "D" then -- desecrate this fire
+				icon = "interface\\icons\\spell_fire_masterofelements"
+			elseif mode == "C" then -- stealing the enemy's flame
+				icon = "interface\\icons\\spell_fire_flameshock"
 			end
 
-			state, value = next(t, state) -- get next data
+			if (db.completed or not completedQuests[questID]) then
+				return state, mapFile, icon, db.icon_scale, db.icon_alpha
+			end
+
+			state, value = next(data, state) -- get next data
 		end
 
 		return nil, nil, nil, nil
 	end
 
+	local function iterCont(t, prestate)
+		if not SummerFestival.isEnabled then return nil end
+		if not t then return nil end
+
+		local zone = t.Z
+		local mapFile = HandyNotes:GetMapIDtoMapFile(t.C[zone])
+		local state, value, data, cleanMapFile
+
+		while mapFile do
+			cleanMapFile = gsub(mapFile, "_terrain%d+$", "")
+			data = points[cleanMapFile]
+
+			if data then -- only if there is data for this zone
+				state, value = next(data, prestate)
+
+				while state do -- have we reached the end of this zone?
+					local questID, mode = value:match("(.*):(.*)")
+					local icon
+
+					if mode == "H" then -- honour the flame
+						icon = "interface\\icons\\inv_summerfest_firespirit"
+					elseif mode == "D" then -- desecrate this fire
+						icon = "interface\\icons\\spell_fire_masterofelements"
+					elseif mode == "C" then -- stealing the enemy's flame
+						icon = "interface\\icons\\spell_fire_flameshock"
+					end
+
+					if (db.completed or not completedQuests[questID]) then
+						return state, mapFile, icon, db.icon_scale, db.icon_alpha
+					end
+
+					state, value = next(data, state) -- get next data
+				end
+			end
+
+			-- get next zone
+			zone = zone + 1
+			t.Z = zone
+			mapFile = HandyNotes:GetMapIDtoMapFile(t.C[zone])
+			prestate = nil
+		end
+	end
+
 	function SummerFestival:GetNodes(mapFile)
-		mapFile = gsub(mapFile, "_terrain%d+$", "")
-		return iter, points[mapFile], nil
+		local C = continentMapFile[mapFile] -- is this a continent?
+
+		if C then
+			local tbl = { C = C, Z = 0 }
+			return iterCont, tbl, nil
+		else
+			mapFile = gsub(mapFile, "_terrain%d+$", "")
+			return iter, points[mapFile], nil
+		end
 	end
 end
 
