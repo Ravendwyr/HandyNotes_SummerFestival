@@ -20,11 +20,18 @@ local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha =
 -- upvalues
 local _G = getfenv(0)
 
+local C_Timer_NewTicker = _G.C_Timer.NewTicker
 local CalendarGetDate = _G.CalendarGetDate
+local CalendarGetDayEvent = _G.CalendarGetDayEvent
+local CalendarGetMonth = _G.CalendarGetMonth
+local CalendarGetNumDayEvents = _G.CalendarGetNumDayEvents
+local CalendarSetAbsMonth = _G.CalendarSetAbsMonth
 local CloseDropDownMenus = _G.CloseDropDownMenus
 local GameTooltip = _G.GameTooltip
+local GetAchievementCriteriaInfo = _G.GetAchievementCriteriaInfo
+local GetGameTime = _G.GetGameTime
+local GetQuestsCompleted = _G.GetQuestsCompleted
 local gsub = _G.string.gsub
-local IsQuestFlaggedCompleted = _G.IsQuestFlaggedCompleted
 local LibStub = _G.LibStub
 local next = _G.next
 local pairs = _G.pairs
@@ -34,9 +41,11 @@ local UIParent = _G.UIParent
 local WorldMapButton = _G.WorldMapButton
 local WorldMapTooltip = _G.WorldMapTooltip
 
+local Astrolabe = DongleStub("Astrolabe-1.0")
 local HandyNotes = _G.HandyNotes
 local TomTom = _G.TomTom
 
+local completedQuests = {}
 local points = SummerFestival.points
 
 
@@ -87,7 +96,7 @@ do
 		if level == 1 then
 			-- create the title of the menu
 			info.isTitle = 1
-			info.text = "Midsummer Festival Bonfire"
+			info.text = "Midsummer Bonfire"
 			info.notCheckable = 1
 
 			UIDropDownMenu_AddButton(info, level)
@@ -280,21 +289,64 @@ local options = {
 }
 
 
--- initialise
-function SummerFestival:OnEnable()
-	local _, month, day = CalendarGetDate()
+-- check
+local setEnabled = false
+local function CheckEventActive()
+	local _, month, day, year = CalendarGetDate()
+	local curMonth, curYear = CalendarGetMonth()
+	local monthOffset = -12 * (curYear - year) + month - curMonth
+	local numEvents = CalendarGetNumDayEvents(monthOffset, day)
 
-	if ( month == 6 and day >= 21 ) or ( month == 7 and day <= 4 ) then
-		HandyNotes:RegisterPluginDB("SummerFestival", self, options)
-		self:RegisterEvent("QUEST_FINISHED", "Refresh")
+	for i=1, numEvents do
+		local _, eventHour, _, eventType, state, _, texture = CalendarGetDayEvent(monthOffset, day, i)
 
-		db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
-	else
-		self:Disable()
+		if texture == "Calendar_Midsummer" then
+			if state == "ONGOING" then
+				setEnabled = true
+			else
+				local hour = GetGameTime()
+
+				if state == "END" and hour <= eventHour or state == "START" and hour >= eventHour then
+					setEnabled = true
+				else
+					setEnabled = false
+				end
+			end
+		end
+	end
+
+	if setEnabled and not SummerFestival.isEnabled then
+		SummerFestival.isEnabled = true
+		SummerFestival:Refresh()
+		SummerFestival:RegisterEvent("QUEST_TURNED_IN", "Refresh")
+
+		HandyNotes:Print("The Midsummer Fire Festival has begun!  Locations of bonfires are now marked on your map.")
+	elseif not setEnabled and SummerFestival.isEnabled then
+		SummerFestival.isEnabled = false
+		SummerFestival:Refresh()
+		SummerFestival:UnregisterAllEvents()
+
+		HandyNotes:Print("The Midsummer Fire Festival has ended.  See you next year!")
 	end
 end
 
-function SummerFestival:Refresh()
+
+-- initialise
+function SummerFestival:OnEnable()
+	self.isEnabled = false
+
+	local _, month, _, year = CalendarGetDate()
+	CalendarSetAbsMonth(month, year)
+
+	C_Timer_NewTicker(15, CheckEventActive)
+	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
+
+	completedQuests = GetQuestsCompleted(completedQuests)
+	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
+end
+
+function SummerFestival:Refresh(_, questID)
+	if questID then completedQuests[questID] = true end
 	self:SendMessage("HandyNotes_NotifyUpdate", "SummerFestival")
 end
 
