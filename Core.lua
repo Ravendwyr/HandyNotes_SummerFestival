@@ -34,9 +34,7 @@ local UIParent = _G.UIParent
 local WorldMapButton = _G.WorldMapButton
 local WorldMapTooltip = _G.WorldMapTooltip
 
-local Cartographer_Waypoints = _G.Cartographer_Waypoints
 local HandyNotes = _G.HandyNotes
-local NotePoint = _G.NotePoint
 local TomTom = _G.TomTom
 
 local points = SummerFestival.points
@@ -65,14 +63,10 @@ function SummerFestival:OnLeave()
 end
 
 local function createWaypoint(button, mapFile, coord)
-	local c, z = HandyNotes:GetCZ(mapFile)
 	local x, y = HandyNotes:getXY(coord)
+	local m = HandyNotes:GetMapFiletoMapID(mapFile)
 
-	if TomTom then
-		TomTom:AddZWaypoint(c, z, x * 100, y * 100, "Midsummer Festival Bonfire")
-	elseif Cartographer_Waypoints then
-		Cartographer_Waypoints:AddWaypoint( NotePoint:new(HandyNotes:GetCZToZone(c, z), x, y, "Midsummer Festival Bonfire") )
-	end
+	TomTom:AddMFWaypoint(m, nil, x, y, { title = "Midsummer Bonfire" })
 end
 
 do
