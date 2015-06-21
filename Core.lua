@@ -178,11 +178,11 @@ do
 				icon = "interface\\icons\\spell_fire_flameshock"
 			end
 
-			if (db.completed or not completedQuests[questID]) then
+			if (db.completed or not completedQuests[tonumber(questID)]) then
 				return state, mapFile, icon, db.icon_scale, db.icon_alpha
 			end
 
-			state, value = next(data, state) -- get next data
+			state, value = next(t, state) -- get next data
 		end
 
 		return nil, nil, nil, nil
@@ -215,7 +215,7 @@ do
 						icon = "interface\\icons\\spell_fire_flameshock"
 					end
 
-					if (db.completed or not completedQuests[questID]) then
+					if (db.completed or not completedQuests[tonumber(questID)]) then
 						return state, mapFile, icon, db.icon_scale, db.icon_alpha
 					end
 
