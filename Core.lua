@@ -50,6 +50,26 @@ local points = SummerFestival.points
 
 
 -- plugin handler for HandyNotes
+local function infoFromCoord(mapFile, coord)
+	mapFile = gsub(mapFile, "_terrain%d+$", "")
+
+	local point = points[mapFile] and points[mapFile][coord]
+
+	if point == "Zidormi" then
+		return point
+	else
+		local mode = point:match("%d+:(.*)")
+
+		if mode == "H" then -- honour the flame
+			return "Honour the Flame"
+		elseif mode == "D" then -- desecrate this fire
+			return "Desecrate this Fire"
+		elseif mode == "C" then -- stealing the enemy's flame
+			return "Capture the Capital City's Flame"
+		end
+	end
+end
+
 function SummerFestival:OnEnter(mapFile, coord)
 	local tooltip = self:GetParent() == WorldMapButton and WorldMapTooltip or GameTooltip
 
@@ -59,7 +79,14 @@ function SummerFestival:OnEnter(mapFile, coord)
 		tooltip:SetOwner(self, "ANCHOR_RIGHT")
 	end
 
-	tooltip:SetText("Midsummer Festival Bonfire")
+	local text = infoFromCoord(mapFile, coord)
+
+	tooltip:SetText(text)
+
+	if text == "Zidormi" then
+		tooltip:AddLine("Talk to the Time Keeper to travel back in time if you can't find the bonfire.", 1, 1, 1)
+	end
+
 	tooltip:Show()
 end
 
@@ -167,19 +194,23 @@ do
 		local state, value = next(t, prestate)
 
 		while state do -- have we reached the end of this zone?
-			local questID, mode = value:match("(%d+):(.*)")
-			local icon
+			if value == "Zidormi" then
+				return state, mapFile, "interface\\icons\\spell_holy_borrowedtime", db.icon_scale, db.icon_alpha
+			else
+				local questID, mode = value:match("(%d+):(.*)")
+				local icon
 
-			if mode == "H" then -- honour the flame
-				icon = "interface\\icons\\inv_summerfest_firespirit"
-			elseif mode == "D" then -- desecrate this fire
-				icon = "interface\\icons\\spell_fire_masterofelements"
-			elseif mode == "C" then -- stealing the enemy's flame
-				icon = "interface\\icons\\spell_fire_flameshock"
-			end
+				if mode == "H" then -- honour the flame
+					icon = "interface\\icons\\inv_summerfest_firespirit"
+				elseif mode == "D" then -- desecrate this fire
+					icon = "interface\\icons\\spell_fire_masterofelements"
+				elseif mode == "C" then -- stealing the enemy's flame
+					icon = "interface\\icons\\spell_fire_flameshock"
+				end
 
-			if (db.completed or not completedQuests[tonumber(questID)]) then
-				return state, mapFile, icon, db.icon_scale, db.icon_alpha
+				if (db.completed or not completedQuests[tonumber(questID)]) then
+					return state, mapFile, icon, db.icon_scale, db.icon_alpha
+				end
 			end
 
 			state, value = next(t, state) -- get next data
@@ -204,19 +235,23 @@ do
 				state, value = next(data, prestate)
 
 				while state do -- have we reached the end of this zone?
-					local questID, mode = value:match("(%d+):(.*)")
-					local icon
+					if value == "Zidormi" then
+						return state, mapFile, "interface\\icons\\spell_holy_borrowedtime", db.icon_scale, db.icon_alpha
+					else
+						local questID, mode = value:match("(%d+):(.*)")
+						local icon
 
-					if mode == "H" then -- honour the flame
-						icon = "interface\\icons\\inv_summerfest_firespirit"
-					elseif mode == "D" then -- desecrate this fire
-						icon = "interface\\icons\\spell_fire_masterofelements"
-					elseif mode == "C" then -- stealing the enemy's flame
-						icon = "interface\\icons\\spell_fire_flameshock"
-					end
+						if mode == "H" then -- honour the flame
+							icon = "interface\\icons\\inv_summerfest_firespirit"
+						elseif mode == "D" then -- desecrate this fire
+							icon = "interface\\icons\\spell_fire_masterofelements"
+						elseif mode == "C" then -- stealing the enemy's flame
+							icon = "interface\\icons\\spell_fire_flameshock"
+						end
 
-					if (db.completed or not completedQuests[tonumber(questID)]) then
-						return state, mapFile, icon, db.icon_scale, db.icon_alpha
+						if (db.completed or not completedQuests[tonumber(questID)]) then
+							return state, mapFile, icon, db.icon_scale, db.icon_alpha
+						end
 					end
 
 					state, value = next(data, state) -- get next data
