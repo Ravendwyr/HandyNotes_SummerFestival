@@ -362,8 +362,8 @@ points["TownlongWastes"] = {
 }
 
 points["ValeofEternalBlossoms"] = {
-	[77763400] = "32509:D",	-- Shrine of Two Moons
-	[79683727] = "32503:H",	-- Shrine of Seven Stars
+	[77763400] = "32509:H",	-- Shrine of Two Moons
+	[79673727] = "32503:D",	-- Shrine of Seven Stars
 }
 
 points["ValleyoftheFourWinds"] = {
