@@ -341,6 +341,8 @@ local function CheckEventActive()
 	end
 
 	if setEnabled and not SummerFestival.isEnabled then
+		completedQuests = GetQuestsCompleted(completedQuests)
+
 		SummerFestival.isEnabled = true
 		SummerFestival:Refresh()
 		SummerFestival:RegisterEvent("QUEST_TURNED_IN", "Refresh")
@@ -372,7 +374,6 @@ function SummerFestival:OnEnable()
 	C_Timer_NewTicker(15, CheckEventActive)
 	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
 
-	completedQuests = GetQuestsCompleted(completedQuests)
 	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
 end
 
