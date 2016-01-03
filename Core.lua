@@ -26,7 +26,6 @@ local CalendarGetDayEvent = _G.CalendarGetDayEvent
 local CalendarGetMonth = _G.CalendarGetMonth
 local CalendarGetNumDayEvents = _G.CalendarGetNumDayEvents
 local CalendarSetAbsMonth = _G.CalendarSetAbsMonth
-local CloseDropDownMenus = _G.CloseDropDownMenus
 local GameTooltip = _G.GameTooltip
 local GetAchievementCriteriaInfo = _G.GetAchievementCriteriaInfo
 local GetGameTime = _G.GetGameTime
@@ -34,9 +33,6 @@ local GetQuestsCompleted = _G.GetQuestsCompleted
 local gsub = _G.string.gsub
 local LibStub = _G.LibStub
 local next = _G.next
-local pairs = _G.pairs
-local ToggleDropDownMenu = _G.ToggleDropDownMenu
-local UIDropDownMenu_AddButton = _G.UIDropDownMenu_AddButton
 local UIParent = _G.UIParent
 local WorldMapButton = _G.WorldMapButton
 local WorldMapTooltip = _G.WorldMapTooltip
@@ -86,6 +82,10 @@ function SummerFestival:OnEnter(mapFile, coord)
 		tooltip:AddLine("Talk to the Time Keeper to travel back in time if you can't find the bonfire.", 1, 1, 1)
 	end
 
+	if TomTom then
+		tooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
+	end
+
 	tooltip:Show()
 end
 
@@ -97,7 +97,8 @@ function SummerFestival:OnLeave()
 	end
 end
 
-local function createWaypoint(_, mapFile, coord)
+
+local function createWaypoint(mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
 	local m = HandyNotes:GetMapFiletoMapID(mapFile)
 
@@ -110,70 +111,12 @@ local function createWaypoint(_, mapFile, coord)
 	TomTom:AddMFWaypoint(m, nil, x, y, { title = text })
 end
 
-do
-	-- context menu generator
-	local info = {}
-	local currentZone, currentCoord
-
-	local function close()
-		-- we need to do this to avoid "for initial value must be a number" errors
-		CloseDropDownMenus()
-	end
-
-	local function generateMenu(button, level)
-		if not level then return end
-
-		for k in pairs(info) do info[k] = nil end
-
-		if level == 1 then
-			-- create the title of the menu
-			info.isTitle = 1
-			info.text = "Midsummer Bonfire"
-			info.notCheckable = 1
-
-			UIDropDownMenu_AddButton(info, level)
-
-			if TomTom or Cartographer_Waypoints then
-				-- waypoint menu item
-				info.notCheckable = nil
-				info.disabled = nil
-				info.isTitle = nil
-				info.icon = nil
-				info.text = "Create waypoint"
-				info.func = createWaypoint
-				info.arg1 = currentZone
-				info.arg2 = currentCoord
-
-				UIDropDownMenu_AddButton(info, level)
-			end
-
-			-- close menu item
-			info.text = "Close"
-			info.func = close
-			info.arg1 = nil
-			info.arg2 = nil
-			info.icon = nil
-			info.isTitle = nil
-			info.disabled = nil
-			info.notCheckable = 1
-
-			UIDropDownMenu_AddButton(info, level)
-		end
-	end
-
-	local dropdown = CreateFrame("Frame", "HandyNotes_SummerFestivalDropdownMenu")
-	dropdown.displayMode = "MENU"
-	dropdown.initialize = generateMenu
-
-	function SummerFestival:OnClick(button, down, mapFile, coord)
-		if button == "RightButton" and not down then
-			currentZone = mapFile
-			currentCoord = coord
-
-			ToggleDropDownMenu(1, nil, dropdown, self, 0, 0)
-		end
+function SummerFestival:OnClick(button, down, mapFile, coord)
+	if TomTom and button == "RightButton" and not down then
+		createWaypoint(mapFile, coord)
 	end
 end
+
 
 do
 	-- custom iterator we use to iterate over every node in a given zone
