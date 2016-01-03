@@ -104,10 +104,6 @@ local function createWaypoint(mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
 	local m = HandyNotes:GetMapFiletoMapID(mapFile)
 
-	if not m then
-		m = HandyNotes:GetMapFiletoMapID(mapFile.."_terrain1")
-	end
-
 	local text = infoFromCoord(mapFile, coord)
 
 	TomTom:AddMFWaypoint(m, nil, x, y, { title = text })
