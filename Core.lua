@@ -24,7 +24,6 @@ local C_Timer_NewTicker = _G.C_Timer.NewTicker
 local C_Calendar = _G.C_Calendar
 local GameTooltip = _G.GameTooltip
 local GetAchievementCriteriaInfo = _G.GetAchievementCriteriaInfo
-local GetGameTime = _G.GetGameTime
 local GetQuestsCompleted = _G.GetQuestsCompleted
 local gsub = _G.string.gsub
 local IsControlKeyDown = _G.IsControlKeyDown
@@ -273,8 +272,8 @@ local options = {
 -- check
 local setEnabled = false
 local function CheckEventActive()
-	local date = C_Calendar.GetDate()
-	local month, day, year = date.month, date.monthDay, date.year
+	local calendar = C_Calendar.GetDate()
+	local month, day, year = calendar.month, calendar.monthDay, calendar.year
 
 	local monthInfo = C_Calendar.GetMonthInfo()
 	local curMonth, curYear = monthInfo.month, monthInfo.year
@@ -289,7 +288,7 @@ local function CheckEventActive()
 			if event.sequenceType == "ONGOING" then
 				setEnabled = true
 			else
-				local hour = GetGameTime()
+				local hour = tonumber(date("%H"))
 
 				if event.sequenceType == "END" and hour <= event.endTime.hour or event.sequenceType == "START" and hour >= event.startTime.hour then
 					setEnabled = true
@@ -328,8 +327,8 @@ function SummerFestival:OnEnable()
 		return
 	end
 
-	local date = C_Calendar.GetDate()
-	C_Calendar.SetAbsMonth(date.month, date.year)
+	local calendar = C_Calendar.GetDate()
+	C_Calendar.SetAbsMonth(calendar.month, calendar.year)
 
 	C_Timer_NewTicker(15, CheckEventActive)
 	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
