@@ -16,6 +16,18 @@ SummerFestival.points = {}
 local db
 local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha = 0.8 } }
 
+local continents = {
+	[12]  = true, -- Kalimdor
+	[13]  = true, -- Eastern Kingdoms
+	[101] = true, -- Outland
+	[113] = true, -- Northrend
+	[424] = true, -- Pandaria
+	[572] = true, -- Draenor
+	[619] = true, -- Broken Isles
+	[875] = true, -- Zandalar
+	[876] = true, -- Kul Tiras
+}
+
 
 -- upvalues
 local _G = getfenv(0)
@@ -42,26 +54,6 @@ local points = SummerFestival.points
 
 
 -- plugin handler for HandyNotes
-local function infoFromCoord(mapFile, coord)
-	mapFile = gsub(mapFile, "_terrain%d+$", "")
-
-	local point = points[mapFile] and points[mapFile][coord]
-
-	if point == "Zidormi" then
-		return point
-	else
-		local mode = point:match("%d+:(.*)")
-
-		if mode == "H" then -- honour the flame
-			return "Honour the Flame"
-		elseif mode == "D" then -- desecrate this fire
-			return "Desecrate this Fire"
-		elseif mode == "C" then -- stealing the enemy's flame
-			return "Capture the Capital City's Flame"
-		end
-	end
-end
-
 function SummerFestival:OnEnter(mapFile, coord)
 	local tooltip = self:GetParent() == WorldMapButton and WorldMapTooltip or GameTooltip
 
@@ -71,7 +63,22 @@ function SummerFestival:OnEnter(mapFile, coord)
 		tooltip:SetOwner(self, "ANCHOR_RIGHT")
 	end
 
-	local text = infoFromCoord(mapFile, coord)
+	local point = points[mapFile] and points[mapFile][coord]
+
+	local text
+	if point == "Zidormi" then
+		text = point
+	else
+		local mode = point:match("%d+:(.*)")
+
+		if mode == "H" then -- honour the flame
+			text = "Honour the Flame"
+		elseif mode == "D" then -- desecrate this fire
+			text = "Desecrate this Fire"
+		elseif mode == "C" then -- stealing the enemy's flame
+			text = "Capture the Capital City's Flame"
+		end
+	end
 
 	tooltip:SetText(text)
 
@@ -133,95 +140,33 @@ end
 
 do
 	-- custom iterator we use to iterate over every node in a given zone
-	local function iter(t, prestate)
-		if not SummerFestival.isEnabled then return nil end
-		if not t then return nil end
+	local function iterator(t, prev)
+		if not SummerFestival.isEnabled then return end
+		if not t then return end
 
-		local state, value = next(t, prestate)
+		local coord, value = next(t, prev)
+		while coord do
+			local questID, mode = value:match("(%d+):(.*)")
+			local icon
 
-		while state do -- have we reached the end of this zone?
-			if value == "Zidormi" then
-				return state, mapFile, "interface\\icons\\spell_holy_borrowedtime", db.icon_scale, db.icon_alpha
-			else
-				local questID, mode = value:match("(%d+):(.*)")
-				local icon
-
-				if mode == "H" then -- honour the flame
-					icon = "interface\\icons\\inv_summerfest_firespirit"
-				elseif mode == "D" then -- desecrate this fire
-					icon = "interface\\icons\\spell_fire_masterofelements"
-				elseif mode == "C" then -- stealing the enemy's flame
-					icon = "interface\\icons\\spell_fire_flameshock"
-				end
-
-				if (db.completed or not completedQuests[tonumber(questID)]) then
-					return state, mapFile, icon, db.icon_scale, db.icon_alpha
-				end
+			if mode == "H" then -- honour the flame
+				icon = "interface\\icons\\inv_summerfest_firespirit"
+			elseif mode == "D" then -- desecrate this fire
+				icon = "interface\\icons\\spell_fire_masterofelements"
+			elseif mode == "C" then -- stealing the enemy's flame
+				icon = "interface\\icons\\spell_fire_flameshock"
 			end
 
-			state, value = next(t, state) -- get next data
-		end
-
-		return nil, nil, nil, nil
-	end
-
-	local function iterCont(t, prestate)
-		if not SummerFestival.isEnabled then return nil end
-		if not t then return nil end
-
-		local zone = t.Z
-		local mapFile = HandyNotes:GetMapIDtoMapFile(t.C[zone])
-		local state, value, data, cleanMapFile
-
-		while mapFile do
-			cleanMapFile = gsub(mapFile, "_terrain%d+$", "")
-			data = points[cleanMapFile]
-
-			if data then -- only if there is data for this zone
-				state, value = next(data, prestate)
-
-				while state do -- have we reached the end of this zone?
-					if value == "Zidormi" then
-						return state, mapFile, "interface\\icons\\spell_holy_borrowedtime", db.icon_scale, db.icon_alpha
-					else
-						local questID, mode = value:match("(%d+):(.*)")
-						local icon
-
-						if mode == "H" then -- honour the flame
-							icon = "interface\\icons\\inv_summerfest_firespirit"
-						elseif mode == "D" then -- desecrate this fire
-							icon = "interface\\icons\\spell_fire_masterofelements"
-						elseif mode == "C" then -- stealing the enemy's flame
-							icon = "interface\\icons\\spell_fire_flameshock"
-						end
-
-						if (db.completed or not completedQuests[tonumber(questID)]) then
-							return state, mapFile, icon, db.icon_scale, db.icon_alpha
-						end
-					end
-
-					state, value = next(data, state) -- get next data
-				end
+			if value and (db.completed or not completedQuests[tonumber(questID)]) then
+				return coord, nil, icon, db.icon_scale, db.icon_alpha
 			end
 
-			-- get next zone
-			zone = next(t.C, zone)
-			t.Z = zone
-			mapFile = HandyNotes:GetMapIDtoMapFile(t.C[zone])
-			prestate = nil
+			coord, value = next(t, coord)
 		end
 	end
 
-	function SummerFestival:GetNodes(mapFile)
-		local C = HandyNotes:GetContinentZoneList(mapFile) -- Is this a continent?
-
-		if C then
-			local tbl = { C = C, Z = next(C) }
-			return iterCont, tbl, nil
-		else
-			mapFile = gsub(mapFile, "_terrain%d+$", "")
-			return iter, points[mapFile], nil
-		end
+	function SummerFestival:GetNodes2(mapID, minimap)
+		return iterator, points[mapID]
 	end
 end
 
@@ -324,6 +269,23 @@ function SummerFestival:OnEnable()
 	if not HereBeDragons then
 		HandyNotes:Print("Your installed copy of HandyNotes is out of date and the Summer Festival plug-in will not work correctly.  Please update HandyNotes to version 1.5.0 or newer.")
 		return
+	end
+
+	for continentMapID in next, continents do
+		local children = C_Map.GetMapChildrenInfo(continentMapID)
+		for _, map in next, children do
+			local coords = points[map.mapID]
+			if coords then
+				for coord, criteria in next, coords do
+					local mx, my = HandyNotes:getXY(coord)
+					local cx, cy = HereBeDragons:TranslateZoneCoordinates(mx, my, map.mapID, continentMapID)
+					if cx and cy then
+						points[continentMapID] = points[continentMapID] or {}
+						points[continentMapID][HandyNotes:getCoord(cx, cy)] = criteria
+					end
+				end
+			end
+		end
 	end
 
 	local calendar = C_Calendar.GetDate()
