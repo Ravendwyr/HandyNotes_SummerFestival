@@ -105,18 +105,16 @@ end
 
 local function createWaypoint(mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
-	local m = HandyNotes:GetMapFiletoMapID(mapFile)
+	local point = points[mapFile] and points[mapFile][coord]
 
-	local text = infoFromCoord(mapFile, coord)
-
-	TomTom:AddMFWaypoint(m, nil, x, y, { title = text })
-	TomTom:SetClosestWaypoint()
+	TomTom:AddWaypoint(mapFile, x, y, { title = "Midsummer Bonfire", persistent = nil, minimap = true, world = true })
 end
 
 local function createAllWaypoints()
 	local questID, mode
 
 	for mapFile, coords in next, points do
+		if not continents[mapFile] then
 		for coord, value in next, coords do
 			questID, mode = value:match("(%d+):(.*)")
 
@@ -124,7 +122,9 @@ local function createAllWaypoints()
 				createWaypoint(mapFile, coord)
 			end
 		end
+		end
 	end
+	TomTom:SetClosestWaypoint()
 end
 
 function SummerFestival:OnClick(button, down, mapFile, coord)
