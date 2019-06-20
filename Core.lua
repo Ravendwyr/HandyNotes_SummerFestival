@@ -73,7 +73,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 		elseif mode == "D" then -- desecrate this fire
 			text = "Desecrate this Fire"
 		elseif mode == "C" then -- stealing the enemy's flame
-			text = "Capture the Capital City's Flame"
+			text = "Capture the City's Flame"
 		end
 
 	tooltip:SetText(text)
