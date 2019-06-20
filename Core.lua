@@ -66,9 +66,6 @@ function SummerFestival:OnEnter(mapFile, coord)
 	local point = points[mapFile] and points[mapFile][coord]
 
 	local text
-	if point == "Zidormi" then
-		text = point
-	else
 		local mode = point:match("%d+:(.*)")
 
 		if mode == "H" then -- honour the flame
@@ -81,10 +78,6 @@ function SummerFestival:OnEnter(mapFile, coord)
 	end
 
 	tooltip:SetText(text)
-
-	if text == "Zidormi" then
-		tooltip:AddLine("Talk to the Time Keeper to travel back in time if you can't find the bonfire.", 1, 1, 1)
-	end
 
 	if TomTom then
 		tooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)

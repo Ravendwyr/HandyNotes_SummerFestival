@@ -22,7 +22,6 @@ points[15] = { -- "Badlands"
 }
 
 points[17] = { -- "BlastedLands"
-	[48160728] = "Zidormi",
 	[46221379] = "28930:H",	-- Dreadmaul Hold
 	[55211519] = "11737:D",	-- Nethergarde Keep
 }
