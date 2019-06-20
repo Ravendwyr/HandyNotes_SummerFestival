@@ -75,7 +75,6 @@ function SummerFestival:OnEnter(mapFile, coord)
 		elseif mode == "C" then -- stealing the enemy's flame
 			text = "Capture the Capital City's Flame"
 		end
-	end
 
 	tooltip:SetText(text)
 
