@@ -28,6 +28,33 @@ local continents = {
 	[876] = true, -- Kul Tiras
 }
 
+local notes = {
+	-- Blasted Lands
+	["11737"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["11808"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["28917"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["28930"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+
+	-- Darkshore
+	["11740"] = "Speak to Zidormi in Darkshore to gain access to Lor'danel.",
+	["11811"] = "Speak to Zidormi in Darkshore to gain access to Lor'danel.",
+
+	-- Silithus
+	["11760"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["11800"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["11831"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["11836"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+
+	-- Teldrassil
+	["9332"]  = "Speak to Zidormi in Darkshore to gain access to Darnassus.",
+	["11753"] = "Speak to Zidormi in Darkshore to gain access to Teldrassil.",
+	["11824"] = "Speak to Zidormi in Darkshore to gain access to Teldrassil.",
+
+	-- Tirisfal Glades
+	["9326"]  = "Speak to Zidormi in Tirisfal to gain access to The Undercity.",
+	["11786"] = "Speak to Zidormi in Tirisfal to gain access to Brill.",
+	["11862"] = "Speak to Zidormi in Tirisfal to gain access to Brill.",
+}
 
 -- upvalues
 local _G = getfenv(0)
@@ -66,7 +93,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 	local point = points[mapFile] and points[mapFile][coord]
 
 	local text
-		local mode = point:match("%d+:(.*)")
+		local questID, mode = point:match("(%d+):(.*)")
 
 		if mode == "H" then -- honour the flame
 			text = "Honour the Flame"
@@ -77,6 +104,11 @@ function SummerFestival:OnEnter(mapFile, coord)
 		end
 
 	tooltip:SetText(text)
+
+	if notes[questID] then
+		tooltip:AddLine(notes[questID])
+		tooltip:AddLine(" ")
+	end
 
 	if TomTom then
 		tooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
