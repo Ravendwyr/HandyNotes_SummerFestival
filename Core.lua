@@ -82,12 +82,10 @@ local points = SummerFestival.points
 
 -- plugin handler for HandyNotes
 function SummerFestival:OnEnter(mapFile, coord)
-	local tooltip = self:GetParent() == WorldMapButton and WorldMapTooltip or GameTooltip
-
 	if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
-		tooltip:SetOwner(self, "ANCHOR_LEFT")
+		GameTooltip:SetOwner(self, "ANCHOR_LEFT")
 	else
-		tooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 	end
 
 	local point = points[mapFile] and points[mapFile][coord]
@@ -103,19 +101,19 @@ function SummerFestival:OnEnter(mapFile, coord)
 			text = "Capture the City's Flame"
 		end
 
-	tooltip:SetText(text)
+	GameTooltip:SetText(text)
 
 	if notes[questID] then
-		tooltip:AddLine(notes[questID])
-		tooltip:AddLine(" ")
+		GameTooltip:AddLine(notes[questID])
+		GameTooltip:AddLine(" ")
 	end
 
 	if TomTom then
-		tooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
-		tooltip:AddLine("Control-Right-click to set waypoints to every bonfire.", 1, 1, 1)
+		GameTooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
+		GameTooltip:AddLine("Control-Right-click to set waypoints to every bonfire.", 1, 1, 1)
 	end
 
-	tooltip:Show()
+	GameTooltip:Show()
 end
 
 function SummerFestival:OnLeave()
