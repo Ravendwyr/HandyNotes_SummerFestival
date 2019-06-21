@@ -419,3 +419,35 @@ points[680] = { -- "Suramar"
 	[30404540] = "44627:D", -- Ambervale
 	[22855830] = "44613:H", -- Felsoul Hold
 }
+
+--------------
+-- Zandalar --
+--------------
+
+points[862] = { -- "Zuldazar"
+	[53314811] = "54744:D", -- Village in the Vines
+}
+
+points[863] = { -- "Nazmir"
+	[40047429] = "54746:D", -- Zul'jan Ruins
+}
+
+points[864] = { -- "Vol'dun"
+	[56004775] = "54749:D", -- Vulpera Hideaway
+}
+
+---------------
+-- Kul Tiras --
+---------------
+
+points[895] = { -- "Tiragarde Sound"
+	[76344987] = "54737:H", -- Bridgeport
+}
+
+points[896] = { -- "Drustvar"
+	[40214758] = "54743:H", -- Arom's Stand
+}
+
+points[942] = { -- "Stormsong Valley"
+	[35865134] = "54741:H", -- Fort Daelin
+}
