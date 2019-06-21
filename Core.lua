@@ -56,6 +56,7 @@ local notes = {
 	["11862"] = "Speak to Zidormi in Tirisfal to gain access to Brill.",
 }
 
+
 -- upvalues
 local _G = getfenv(0)
 
@@ -87,17 +88,16 @@ function SummerFestival:OnEnter(mapFile, coord)
 	end
 
 	local point = points[mapFile] and points[mapFile][coord]
-
 	local text
-		local questID, mode = point:match("(%d+):(.*)")
+	local questID, mode = point:match("(%d+):(.*)")
 
-		if mode == "H" then -- honour the flame
-			text = "Honour the Flame"
-		elseif mode == "D" then -- desecrate this fire
-			text = "Desecrate this Fire"
-		elseif mode == "C" then -- stealing the enemy's flame
-			text = "Capture the City's Flame"
-		end
+	if mode == "H" then -- honour the flame
+		text = "Honour the Flame"
+	elseif mode == "D" then -- desecrate this fire
+		text = "Desecrate this Fire"
+	elseif mode == "C" then -- stealing the enemy's flame
+		text = "Capture the City's Flame"
+	end
 
 	GameTooltip:SetText(text)
 
@@ -115,7 +115,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 end
 
 function SummerFestival:OnLeave()
-		GameTooltip:Hide()
+	GameTooltip:Hide()
 end
 
 
