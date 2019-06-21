@@ -70,8 +70,6 @@ local IsControlKeyDown = _G.IsControlKeyDown
 local LibStub = _G.LibStub
 local next = _G.next
 local UIParent = _G.UIParent
-local WorldMapButton = _G.WorldMapButton
-local WorldMapTooltip = _G.WorldMapTooltip
 
 local HandyNotes = _G.HandyNotes
 local TomTom = _G.TomTom
@@ -117,11 +115,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 end
 
 function SummerFestival:OnLeave()
-	if self:GetParent() == WorldMapButton then
-		WorldMapTooltip:Hide()
-	else
 		GameTooltip:Hide()
-	end
 end
 
 
