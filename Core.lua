@@ -234,7 +234,7 @@ local options = {
 -- check
 local setEnabled = false
 local function CheckEventActive()
-	local calendar = C_Calendar.GetDate()
+	local calendar = C_DateAndTime.GetCurrentCalendarTime()
 	local month, day, year = calendar.month, calendar.monthDay, calendar.year
 
 	local monthInfo = C_Calendar.GetMonthInfo()
@@ -304,7 +304,7 @@ function SummerFestival:OnEnable()
 		end
 	end
 
-	local calendar = C_Calendar.GetDate()
+	local calendar = C_DateAndTime.GetCurrentCalendarTime()
 	C_Calendar.SetAbsMonth(calendar.month, calendar.year)
 	CheckEventActive()
 
