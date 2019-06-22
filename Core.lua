@@ -306,11 +306,12 @@ function SummerFestival:OnEnable()
 
 	local calendar = C_Calendar.GetDate()
 	C_Calendar.SetAbsMonth(calendar.month, calendar.year)
+	CheckEventActive()
 
-	C_Timer_NewTicker(15, CheckEventActive)
 	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
-
 	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
+
+	C_Timer_NewTicker(30, CheckEventActive)
 end
 
 function SummerFestival:Refresh(_, questID)
