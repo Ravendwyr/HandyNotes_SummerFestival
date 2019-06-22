@@ -311,7 +311,12 @@ function SummerFestival:OnEnable()
 	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
 	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
 
-	C_Timer_NewTicker(30, CheckEventActive)
+--	C_Timer_NewTicker(30, CheckEventActive)
+	self:RegisterEvent("CALENDAR_UPDATE_EVENT", CheckEventActive)
+	self:RegisterEvent("CALENDAR_UPDATE_EVENT_LIST", CheckEventActive)
+	self:RegisterEvent("GUILD_ROSTER_UPDATE", CheckEventActive)
+	self:RegisterEvent("PLAYER_GUILD_UPDATE", CheckEventActive)
+	self:RegisterEvent("ZONE_CHANGED", CheckEventActive)
 end
 
 function SummerFestival:Refresh(_, questID)
