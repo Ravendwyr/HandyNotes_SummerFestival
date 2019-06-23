@@ -309,6 +309,14 @@ function SummerFestival:OnEnable()
 		end
 	end
 
+	-- special treatment for Teldrassil as the HereBeDragons-2.0 library isn't recognising it as a "child zone" of Kalimdor at the moment
+	if UnitFactionGroup("player") == "Alliance" then
+		points[12][43611031] = "11824:H" -- Dolanaar
+	elseif UnitFactionGroup("player") == "Horde" then
+		points[12][43541026] = "11753:D" -- Dolanaar
+		points[12][40370935] = "9332:C"  -- Stealing Darnassus' Flame
+	end
+
 	local calendar = C_DateAndTime.GetCurrentCalendarTime()
 	C_Calendar.SetAbsMonth(calendar.month, calendar.year)
 	CheckEventActive()
