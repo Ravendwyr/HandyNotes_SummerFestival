@@ -12,11 +12,11 @@ Marks the locations of Midsummer Fire Festival bonfires on the worldmap and mini
 ## The Quick Intro
 
 This addon displays locations of unvisited elders on the worldmap and minimap.
-If you also have [TomTom](https://www.curseforge.com/wow/addons/tomtomm), you can right-click on a marker to create a Waypoint arrow.
+If you also have [TomTom](https://www.curseforge.com/wow/addons/tomtom), you can right-click on a marker to create a Waypoint arrow.
 
 This addon is the successor to [TourGuide - The Misdummer Festival](https://github.com/EthanCentaurai/TourGuide_MidsummerFestival).
 
-Requires [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) to work.
+Requires [HandyNotes](https://www.curseforge.com/wow/addons/handynotes) v1.5.0 or newer to work.
 
 ## Configuration
 
