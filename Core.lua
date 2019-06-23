@@ -60,7 +60,7 @@ local notes = {
 -- upvalues
 local _G = getfenv(0)
 
-local C_Timer_NewTicker = _G.C_Timer.NewTicker
+local C_Timer_After = _G.C_Timer.After
 local C_Calendar = _G.C_Calendar
 local GameTooltip = _G.GameTooltip
 local GetAchievementCriteriaInfo = _G.GetAchievementCriteriaInfo
@@ -276,6 +276,11 @@ local function CheckEventActive()
 	end
 end
 
+local function RepeatingCheck()
+	CheckEventActive()
+	C_Timer_After(60, RepeatingCheck)
+end
+
 
 -- initialise
 function SummerFestival:OnEnable()
@@ -311,12 +316,11 @@ function SummerFestival:OnEnable()
 	HandyNotes:RegisterPluginDB("SummerFestival", self, options)
 	db = LibStub("AceDB-3.0"):New("HandyNotes_SummerFestivalDB", defaults, "Default").profile
 
---	C_Timer_NewTicker(30, CheckEventActive)
 	self:RegisterEvent("CALENDAR_UPDATE_EVENT", CheckEventActive)
 	self:RegisterEvent("CALENDAR_UPDATE_EVENT_LIST", CheckEventActive)
-	self:RegisterEvent("GUILD_ROSTER_UPDATE", CheckEventActive)
-	self:RegisterEvent("PLAYER_GUILD_UPDATE", CheckEventActive)
 	self:RegisterEvent("ZONE_CHANGED", CheckEventActive)
+
+	C_Timer_After(60, RepeatingCheck)
 end
 
 function SummerFestival:Refresh(_, questID)
