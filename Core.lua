@@ -46,10 +46,10 @@ local notes = {
 	["11811"] = "Speak to Zidormi in Darkshore to gain access to Lor'danel.",
 
 	-- Silithus
-	["11760"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
-	["11800"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
-	["11831"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
-	["11836"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
+	["11760"] = "Speak to Zidormi at the north-east of the zone to gain access to this bonfire.",
+	["11800"] = "Speak to Zidormi at the north-east of the zone to gain access to this bonfire.",
+	["11831"] = "Speak to Zidormi at the north-east of the zone to gain access to this bonfire.",
+	["11836"] = "Speak to Zidormi at the north-east of the zone to gain access to this bonfire.",
 
 	-- Teldrassil
 	["9332"]  = "Speak to Zidormi in Darkshore to gain access to Darnassus.",
