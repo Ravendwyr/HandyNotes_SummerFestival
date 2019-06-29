@@ -29,6 +29,12 @@ local continents = {
 }
 
 local notes = {
+	-- Arathi
+	["11732"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
+	["11764"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
+	["11804"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
+	["11840"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
+
 	-- Blasted Lands
 	["11737"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
 	["11808"] = "Speak to Zidormi at the north of the zone to gain access to this bonfire.",
