@@ -1,3 +1,4 @@
 ignore:
   - _config.yml
   - README.md
+  - CHANGELOG.md
