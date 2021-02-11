@@ -21,11 +21,14 @@ local continents = {
 	[13]  = true, -- Eastern Kingdoms
 	[101] = true, -- Outland
 	[113] = true, -- Northrend
+	[203] = true, -- Vashj'ir
+	[224] = true, -- Stranglethorn Vale
 	[424] = true, -- Pandaria
 	[572] = true, -- Draenor
 	[619] = true, -- Broken Isles
 	[875] = true, -- Zandalar
 	[876] = true, -- Kul Tiras
+	[947] = true, -- Azeroth
 }
 
 local notes = {
@@ -294,8 +297,20 @@ function SummerFestival:OnEnable()
 		return
 	end
 
+	-- special treatment for Teldrassil as C_Map.GetMapChildrenInfo() isn't recognising it as a "child zone" of Kalimdor at the moment
+	if UnitFactionGroup("player") == "Alliance" then
+		points[12] = {
+			[43611031] = "11824:H", -- Dolanaar
+		}
+	elseif UnitFactionGroup("player") == "Horde" then
+		points[12] = {
+			[43541026] = "11753:D", -- Dolanaar
+			[40370935] = "9332:C",  -- Stealing Darnassus' Flame
+		}
+	end
+
 	for continentMapID in next, continents do
-		local children = C_Map.GetMapChildrenInfo(continentMapID)
+		local children = C_Map.GetMapChildrenInfo(continentMapID, nil, true)
 		for _, map in next, children do
 			local coords = points[map.mapID]
 			if coords then
@@ -309,14 +324,6 @@ function SummerFestival:OnEnable()
 				end
 			end
 		end
-	end
-
-	-- special treatment for Teldrassil as the HereBeDragons-2.0 library isn't recognising it as a "child zone" of Kalimdor at the moment
-	if UnitFactionGroup("player") == "Alliance" then
-		points[12][43611031] = "11824:H" -- Dolanaar
-	elseif UnitFactionGroup("player") == "Horde" then
-		points[12][43541026] = "11753:D" -- Dolanaar
-		points[12][40370935] = "9332:C"  -- Stealing Darnassus' Flame
 	end
 
 	local calendar = C_DateAndTime.GetCurrentCalendarTime()
