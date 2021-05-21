@@ -67,18 +67,18 @@ local notes = {
 
 
 -- upvalues
-local C_Timer_After = C_Timer.After
-local C_Calendar = C_Calendar
-local GameTooltip = GameTooltip
-local GetGameTime = GetGameTime
-local GetQuestsCompleted = GetQuestsCompleted
-local IsControlKeyDown = IsControlKeyDown
-local LibStub = LibStub
-local next = next
-local UIParent = UIParent
+local C_Calendar = _G.C_Calendar
+local C_DateAndTime = _G.C_DateAndTime
+local C_Map = _G.C_Map
+local C_QuestLog = _G.C_QuestLog
+local C_Timer_After = _G.C_Timer.After
+local GameTooltip = _G.GameTooltip
+local IsControlKeyDown = _G.IsControlKeyDown
+local UIParent = _G.UIParent
 
-local HandyNotes = HandyNotes
-local TomTom = TomTom
+local LibStub = _G.LibStub
+local HandyNotes = _G.HandyNotes
+local TomTom = _G.TomTom
 
 local completedQuests = {}
 local points = SummerFestival.points
@@ -186,7 +186,7 @@ do
 		end
 	end
 
-	function SummerFestival:GetNodes2(mapID, minimap)
+	function SummerFestival:GetNodes2(mapID)
 		return iterator, points[mapID]
 	end
 end
@@ -241,6 +241,7 @@ local setEnabled = false
 local function CheckEventActive()
 	local calendar = C_DateAndTime.GetCurrentCalendarTime()
 	local month, day, year = calendar.month, calendar.monthDay, calendar.year
+	local hour, minute = calendar.hour, calendar.minute
 
 	local monthInfo = C_Calendar.GetMonthInfo()
 	local curMonth, curYear = monthInfo.month, monthInfo.year
@@ -252,8 +253,6 @@ local function CheckEventActive()
 		local event = C_Calendar.GetDayEvent(monthOffset, day, i)
 
 		if event.iconTexture == 235472 or event.iconTexture == 235473 or event.iconTexture == 235474 then
-			local hour, minute = GetGameTime()
-
 			setEnabled = event.sequenceType == "ONGOING" -- or event.sequenceType == "INFO"
 
 			if event.sequenceType == "START" then
@@ -265,7 +264,9 @@ local function CheckEventActive()
 	end
 
 	if setEnabled and not SummerFestival.isEnabled then
-		completedQuests = GetQuestsCompleted(completedQuests)
+		for _, id in ipairs(C_QuestLog.GetAllCompletedQuestIDs()) do
+			completedQuests[id] = true
+		end
 
 		SummerFestival.isEnabled = true
 		SummerFestival:Refresh()
