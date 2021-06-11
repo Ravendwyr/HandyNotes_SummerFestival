@@ -5,6 +5,7 @@
 ## Version: @project-version@
 ## X-Category: Map & Minimap
 ## X-Curse-Project-ID: 45903
+## X-Wago-ID: Xb6Xxw6p
 ## SavedVariables: HandyNotes_SummerFestivalDB
 ## RequiredDeps: HandyNotes
 
