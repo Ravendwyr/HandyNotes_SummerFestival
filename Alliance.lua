@@ -299,6 +299,7 @@ points[121] = {
 ---------------
 -- Cataclysm --
 ---------------
+
 points[207] = { -- "Deepholm"
 	[49405132] = "29036:H",	-- Temple of Earth
 }
@@ -384,6 +385,7 @@ points[550] = { -- "NagrandDraenor"
 	[80504770] = "44572:H", -- The Ring of Trials
 }
 
+
 ------------------
 -- Broken Isles --
 ------------------
@@ -409,6 +411,7 @@ points[680] = { -- "Suramar"
 	[22855830] = "44613:H", -- Felsoul Hold
 }
 
+
 --------------
 -- Zandalar --
 --------------
@@ -425,6 +428,7 @@ points[864] = { -- "Vol'dun"
 	[56004775] = "54749:D", -- Vulpera Hideaway
 }
 
+
 ---------------
 -- Kul Tiras --
 ---------------
@@ -439,4 +443,33 @@ points[896] = { -- "Drustvar"
 
 points[942] = { -- "Stormsong Valley"
 	[35865134] = "54741:H", -- Fort Daelin
+}
+
+
+------------------
+-- Dragon Isles --
+------------------
+
+points[2022] = { -- The Waking Shores
+	[45998286] = "75398:H", -- Dragonscale Basecamp
+}
+
+points[2023] = { -- Ohn'ahran Plains
+	[63873499] = "75617:H", -- Maruukai
+}
+
+points[2024] = { -- The Azure Span
+	[12224756] = "75640:H", -- Iskaara
+}
+
+points[2112] = { -- Valdrakken
+	[52916149] = "75645:H",
+}
+
+points[2151] = { -- The Forbidden Reach
+	[34976089] = "75647:H", -- Morqut Village
+}
+
+points[2133] = { -- Zaralek Cavern
+	[55175543] = "75650:H", -- Loamm
 }

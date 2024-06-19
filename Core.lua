@@ -17,18 +17,20 @@ local db
 local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha = 0.8 } }
 
 local continents = {
-	[12]  = true, -- Kalimdor
-	[13]  = true, -- Eastern Kingdoms
-	[101] = true, -- Outland
-	[113] = true, -- Northrend
-	[203] = true, -- Vashj'ir
-	[224] = true, -- Stranglethorn Vale
-	[424] = true, -- Pandaria
-	[572] = true, -- Draenor
-	[619] = true, -- Broken Isles
-	[875] = true, -- Zandalar
-	[876] = true, -- Kul Tiras
-	[947] = true, -- Azeroth
+	[12]   = true, -- Kalimdor
+	[13]   = true, -- Eastern Kingdoms
+	[101]  = true, -- Outland
+	[113]  = true, -- Northrend
+	[203]  = true, -- Vashj'ir
+	[224]  = true, -- Stranglethorn Vale
+	[424]  = true, -- Pandaria
+	[572]  = true, -- Draenor
+	[619]  = true, -- Broken Isles
+	[875]  = true, -- Zandalar
+	[876]  = true, -- Kul Tiras
+	[947]  = true, -- Azeroth
+	[1978] = true, -- Dragon Isles
+	[2025] = true, -- Thaldraszus
 }
 
 local notes = {
@@ -96,13 +98,9 @@ function SummerFestival:OnEnter(mapFile, coord)
 	local text
 	local questID, mode = point:match("(%d+):(.*)")
 
-	if mode == "H" then -- honour the flame
-		text = "Honour the Flame"
-	elseif mode == "D" then -- desecrate this fire
-		text = "Desecrate this Fire"
-	elseif mode == "C" then -- stealing the enemy's flame
-		text = "Capture the City's Flame"
-	end
+	if mode == "H" then text = "Honor the Flame"
+	elseif mode == "D" then text = "Desecrate this Fire!"
+	elseif mode == "C" then text = "Steal the City's Flame" end
 
 	GameTooltip:SetText(text)
 
@@ -317,7 +315,7 @@ function SummerFestival:OnEnable()
 			if coords then
 				for coord, criteria in next, coords do
 					local mx, my = HandyNotes:getXY(coord)
-					local cx, cy = HereBeDragons:TranslateZoneCoordinates(mx, my, map.mapID, continentMapID)
+					local cx, cy = HereBeDragons:TranslateZoneCoordinates(mx, my, map.mapID, continentMapID, false)
 					if cx and cy then
 						points[continentMapID] = points[continentMapID] or {}
 						points[continentMapID][HandyNotes:getCoord(cx, cy)] = criteria
