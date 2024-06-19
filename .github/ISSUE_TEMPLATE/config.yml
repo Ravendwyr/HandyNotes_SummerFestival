@@ -3,12 +3,12 @@ contact_links:
   - name: Discussion
     url: https://github.com/Ravendwyr/HandyNotes_SummerFestival/discussions
     about: Start a discussion without the need to open a support ticket.
-  - name: Twitter
-    url: https://twitter.com/Ravendwyr
-    about: Send a tweet on Twitter.
+  - name: Mastodon
+    url: https://gamepad.club/@ravendwyr
+    about: Send a toot on Mastodon.
   - name: Discord
     url: https://top.gg/servers/299308204393889802
     about: Send a message on Discord.
-  - name: Armory
-    url: https://worldofwarcraft.com/en-us/character/us/baelgun/okelani
-    about: Send a message in-game.
+  - name: Azeroth
+    url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/argent-dawn/howlsin
+    about: Send a whisper in World of Warcraft.

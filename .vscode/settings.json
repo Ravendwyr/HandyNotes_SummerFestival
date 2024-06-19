@@ -1,8 +1,5 @@
 {
     "Lua.diagnostics.disable": [
         "undefined-field"
-    ],
-    "Lua.diagnostics.globals": [
-        "UnitFactionGroup"
     ]
 }

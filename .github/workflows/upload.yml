@@ -1,4 +1,4 @@
-name: Upload
+name: Package and Upload
 
 on:
   push:
@@ -11,15 +11,14 @@ on:
 jobs:
   package:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Download Repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
         with:
-          fetch-depth: 50
+          fetch-depth: 20
 
-      - name: Create Package for Retail
-        uses: BigWigsMods/packager@master
+      - name: WoW Packager
+        uses: BigWigsMods/packager@v2.3.1
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
