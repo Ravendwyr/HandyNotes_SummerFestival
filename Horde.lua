@@ -192,6 +192,11 @@ points[71] = { -- "Tanaris"
 	[52673003] = "11762:D",	-- Gadgetzan (east)
 }
 
+points[12] = {
+	[40370935] = "9332:C",  -- Stealing Darnassus' Flame
+	[43541026] = "11753:D", -- Dolanaar
+}
+
 points[57] = { -- "Teldrassil"
 	[34524759] = "9332:C",	-- Stealing Darnassus' Flame
 	[54745293] = "11753:D",	-- Dolanaar

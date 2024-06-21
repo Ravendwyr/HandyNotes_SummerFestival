@@ -306,18 +306,6 @@ function SummerFestival:OnEnable()
 		return
 	end
 
-	-- special treatment for Teldrassil as C_Map.GetMapChildrenInfo() isn't recognising it as a "child zone" of Kalimdor at the moment
-	if UnitFactionGroup("player") == "Alliance" then
-		points[12] = {
-			[43611031] = "11824:H", -- Dolanaar
-		}
-	elseif UnitFactionGroup("player") == "Horde" then
-		points[12] = {
-			[43541026] = "11753:D", -- Dolanaar
-			[40370935] = "9332:C",  -- Stealing Darnassus' Flame
-		}
-	end
-
 	for continentMapID in next, continents do
 		local children = C_Map.GetMapChildrenInfo(continentMapID, nil, true)
 		if not children then HandyNotes:Print("Map ID " .. continentMapID .. " has invalid data.  Please inform the author of HandyNotes_SummerFestival.  (WoW Project ID " .. WOW_PROJECT_ID .. ")")

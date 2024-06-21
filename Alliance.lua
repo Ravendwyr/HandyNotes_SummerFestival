@@ -192,6 +192,10 @@ points[71] = { -- "Tanaris"
 	[52643026] = "11833:H",	-- Gadgetzan (east)
 }
 
+points[12] = { -- "Teldrassil"
+	[43611031] = "11824:H", -- Dolanaar
+}
+
 points[57] = { -- "Teldrassil"
 	[54885277] = "11824:H",	-- Dolanaar
 }
