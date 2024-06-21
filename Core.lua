@@ -8,7 +8,7 @@
 
 
 -- declaration
-local _, SummerFestival = ...
+local addOnName, SummerFestival = ...
 SummerFestival.points = {}
 
 
@@ -320,15 +320,18 @@ function SummerFestival:OnEnable()
 
 	for continentMapID in next, continents do
 		local children = C_Map.GetMapChildrenInfo(continentMapID, nil, true)
-		for _, map in next, children do
-			local coords = points[map.mapID]
-			if coords then
-				for coord, criteria in next, coords do
-					local mx, my = HandyNotes:getXY(coord)
-					local cx, cy = HereBeDragons:TranslateZoneCoordinates(mx, my, map.mapID, continentMapID, false)
-					if cx and cy then
-						points[continentMapID] = points[continentMapID] or {}
-						points[continentMapID][HandyNotes:getCoord(cx, cy)] = criteria
+		if not children then HandyNotes:Print("Map ID " .. continentMapID .. " has invalid data.  Please inform the author of HandyNotes_SummerFestival.  (WoW Project ID " .. WOW_PROJECT_ID .. ")")
+		else
+			for _, map in next, children do
+				local coords = points[map.mapID]
+				if coords then
+					for coord, criteria in next, coords do
+						local mx, my = HandyNotes:getXY(coord)
+						local cx, cy = HereBeDragons:TranslateZoneCoordinates(mx, my, map.mapID, continentMapID, false)
+						if cx and cy then
+							points[continentMapID] = points[continentMapID] or {}
+							points[continentMapID][HandyNotes:getCoord(cx, cy)] = criteria
+						end
 					end
 				end
 			end
@@ -356,4 +359,4 @@ end
 
 
 -- activate
-LibStub("AceAddon-3.0"):NewAddon(SummerFestival, "HandyNotes_SummerFestival", "AceEvent-3.0")
+LibStub("AceAddon-3.0"):NewAddon(SummerFestival, addOnName, "AceEvent-3.0")
