@@ -16,7 +16,17 @@ SummerFestival.points = {}
 local db
 local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha = 0.8 } }
 
-local continents = {
+local isClassic = WOW_PROJECT_ID == WOW_PROJECT_CATACLYSM_CLASSIC
+
+local continents = isClassic and {
+	[113]  = true, -- Northrend
+	[203]  = true, -- Vashj'ir
+	[224]  = true, -- Stranglethorn Vale
+	[947]  = true, -- Azeroth
+	[1414] = true, -- Kalimdor
+	[1415] = true, -- Eastern Kingdoms
+	[1945] = true, -- Outland
+} or {
 	[12]   = true, -- Kalimdor
 	[13]   = true, -- Eastern Kingdoms
 	[101]  = true, -- Outland
@@ -72,7 +82,7 @@ local notes = {
 local C_Calendar = _G.C_Calendar
 local C_DateAndTime = _G.C_DateAndTime
 local C_Map = _G.C_Map
-local C_QuestLog = _G.C_QuestLog
+local GetQuestsCompleted = isClassic and _G.GetQuestsCompleted or _G.C_QuestLog.GetAllCompletedQuestIDs
 local C_Timer_After = _G.C_Timer.After
 local GameTooltip = _G.GameTooltip
 local IsControlKeyDown = _G.IsControlKeyDown
@@ -262,7 +272,7 @@ local function CheckEventActive()
 	end
 
 	if setEnabled and not SummerFestival.isEnabled then
-		for _, id in ipairs(C_QuestLog.GetAllCompletedQuestIDs()) do
+		for _, id in ipairs(GetQuestsCompleted()) do
 			completedQuests[id] = true
 		end
 
