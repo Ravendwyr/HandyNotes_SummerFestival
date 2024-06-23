@@ -77,7 +77,11 @@ local notes = {
 	["11862"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 
 	-- Vashj'ir
-	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service."
+	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service.",
+
+	-- Uldum
+	["28948"] = "Speak to Zidormi in Ramkahen to gain access to this bonfire.",
+	["28950"] = "Speak to Zidormi in Ramkahen to gain access to this bonfire.",
 }
 
 
