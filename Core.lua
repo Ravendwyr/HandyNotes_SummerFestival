@@ -75,6 +75,9 @@ local notes = {
 	["9326"]  = "Speak to Zidormi near Balnir Farmstead to gain access to The Undercity.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 	["11786"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 	["11862"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
+
+	-- Vashj'ir
+	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service."
 }
 
 
