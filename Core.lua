@@ -142,24 +142,29 @@ end
 local function createWaypoint(mapFile, coord)
 	local x, y = HandyNotes:getXY(coord)
 	local point = points[mapFile] and points[mapFile][coord]
+	local _, mode = point:match("(%d+):(.*)")
+	local text
 
-	TomTom:AddWaypoint(mapFile, x, y, { title = "Midsummer Bonfire", persistent = nil, minimap = true, world = true })
+	if mode == "H" then text = "Honor the Flame"
+	elseif mode == "D" then text = "Desecrate this Fire!"
+	elseif mode == "C" then text = "Steal the City's Flame" end
+
+	TomTom:AddWaypoint(mapFile, x, y, { title = text, from = addOnName, persistent = false, minimap = true, world = true })
 end
 
 local function createAllWaypoints()
-	local questID, mode
-
 	for mapFile, coords in next, points do
 		if not continents[mapFile] then
-		for coord, value in next, coords do
-			questID, mode = value:match("(%d+):(.*)")
+			for coord, value in next, coords do
+				local questID = value:match("(%d+):(.*)")
 
-			if coord and (db.completed or not completedQuests[tonumber(questID)]) then
-				createWaypoint(mapFile, coord)
+				if coord and (db.completed or not completedQuests[tonumber(questID)]) then
+					createWaypoint(mapFile, coord)
+				end
 			end
 		end
-		end
 	end
+
 	TomTom:SetClosestWaypoint()
 end
 
