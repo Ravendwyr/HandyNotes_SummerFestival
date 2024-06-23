@@ -72,9 +72,9 @@ local notes = {
 	["11824"] = "Speak to Zidormi in Darkshore to gain access to Teldrassil.",
 
 	-- Tirisfal Glades
-	["9326"]  = "Speak to Zidormi in Tirisfal to gain access to The Undercity.",
-	["11786"] = "Speak to Zidormi in Tirisfal to gain access to Brill.",
-	["11862"] = "Speak to Zidormi in Tirisfal to gain access to Brill.",
+	["9326"]  = "Speak to Zidormi near Balnir Farmstead to gain access to The Undercity.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
+	["11786"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
+	["11862"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 }
 
 
