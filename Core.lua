@@ -89,7 +89,8 @@ local notes = {
 local C_Calendar = _G.C_Calendar
 local C_DateAndTime = _G.C_DateAndTime
 local C_Map = _G.C_Map
-local GetQuestsCompleted = isClassic and _G.GetQuestsCompleted or _G.C_QuestLog.GetAllCompletedQuestIDs
+local GetAllCompletedQuestIDs = _G.C_QuestLog.GetAllCompletedQuestIDs
+local GetQuestsCompleted = _G.GetQuestsCompleted
 local C_Timer_After = _G.C_Timer.After
 local GameTooltip = _G.GameTooltip
 local IsControlKeyDown = _G.IsControlKeyDown
@@ -284,8 +285,12 @@ local function CheckEventActive()
 	end
 
 	if setEnabled and not SummerFestival.isEnabled then
-		for _, id in ipairs(GetQuestsCompleted()) do
-			completedQuests[id] = true
+		if isClassic then
+			completedQuests = GetQuestsCompleted(completedQuests)
+		else
+			for _, id in ipairs(GetAllCompletedQuestIDs()) do
+				completedQuests[id] = true
+			end
 		end
 
 		SummerFestival.isEnabled = true
