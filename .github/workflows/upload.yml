@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 20
 
       - name: WoW Packager
-        uses: BigWigsMods/packager@v2.3.1
+        uses: BigWigsMods/packager@v2.4.1
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
