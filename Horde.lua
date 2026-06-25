@@ -485,3 +485,28 @@ points[2151] = { -- The Forbidden Reach
 points[2133] = { -- Zaralek Cavern
 	[55175543] = "75650:H", -- Loamm
 }
+
+
+----------------
+-- Khaz Algar --
+----------------
+
+points[2214] = { -- The Ringing Deeps
+	[43653273] = "87357:H", -- Gundargaz
+}
+
+points[2215] = { -- Hallowfall
+	[42415159] = "87355:H", -- Mereldar
+}
+
+points[2248] = { -- Isle of Dorn
+	[49194490] = "87342:H", -- Dornogal
+}
+
+points[2255] = { -- Azj-Kahet
+	[55554335] = "87356:H", -- The Weaver's Lair
+}
+
+points[2339] = { -- Dornogal City
+	[48265152] = "87342:H", -- Dornogal
+}

@@ -41,6 +41,7 @@ local continents = isClassic and {
 	[947]  = true, -- Azeroth
 	[1978] = true, -- Dragon Isles
 	[2025] = true, -- Thaldraszus
+	[2274] = true, -- Khaz Algar
 }
 
 local notes = {
