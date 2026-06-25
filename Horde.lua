@@ -40,6 +40,12 @@ points[47] = { -- "Duskwood"
 	[73215502] = "11743:D",	-- Darkshire
 }
 
+points[23] = { -- "EasternPlaguelands"
+	-- Zidormi
+	[53800871] = "11848:H",	-- Falconwing Square
+	[53800872] = "11850:H",	-- Tranquillien
+}
+
 points[37] = { -- "Elwynn"
 	[19483889] = "9330:C",	-- Stealing Stormwind's Flame
 	[43086285] = "11745:D",	-- Goldshire

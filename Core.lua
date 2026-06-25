@@ -76,6 +76,13 @@ local notes = {
 	["11786"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 	["11862"] = "Speak to Zidormi near Balnir Farmstead to gain access to Brill.\nAlliance players may need to complete the Return To Lordaeron storyline in Oribos in order for Zidormi to appear.",
 
+	-- Eastern Plaguelands
+	["11772"] = "In Eversong Woods. Speak to Zidormi to access Old Quel'Thalas.",
+	["11774"] = "In Ghostlands. Speak to Zidormi to access Old Quel'Thalas.",
+	["11848"] = "In Eversong Woods. Speak to Zidormi to access Old Quel'Thalas.",
+	["11850"] = "In Ghostlands. Speak to Zidormi to access Old Quel'Thalas.",
+	["11935"] = "In Silvermoon City. Speak to Zidormi to access Old Quel'Thalas.",
+
 	-- Vashj'ir
 	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service.",
 
