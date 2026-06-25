@@ -1,7 +1,7 @@
 # These are supported funding model platforms
 
 github: Ravendwyr # Replace with up to 4 GitHub Sponsors-enabled usernames e.g., [user1, user2]
-patreon: # Replace with a single Patreon username
+patreon: Ravendwyr # Replace with a single Patreon username
 open_collective: # Replace with a single Open Collective username
 ko_fi: Ravendwyr # Replace with a single Ko-fi username
 tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
@@ -11,4 +11,5 @@ issuehunt: # Replace with a single IssueHunt username
 lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
 polar: # Replace with a single Polar username
 buy_me_a_coffee: # Replace with a single Buy Me a Coffee username
-custom: ['https://www.twitch.tv/subs/ravendwyr', 'https://throne.com/ravendwyr'] # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
+thanks_dev: # Replace with a single thanks.dev username
+custom: https://www.twitch.tv/subs/ravendwyr # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']

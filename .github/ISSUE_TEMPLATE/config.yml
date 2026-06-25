@@ -1,14 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Discussion
-    url: https://github.com/Ravendwyr/HandyNotes_SummerFestival/discussions
-    about: Start a discussion without the need to open a support ticket.
-  - name: Mastodon
-    url: https://gamepad.club/@ravendwyr
-    about: Send a toot on Mastodon.
-  - name: Discord
-    url: https://top.gg/servers/299308204393889802
-    about: Send a message on Discord.
+  - name: Bluesky
+    url: https://bsky.app/profile/ravendwyr.bsky.social
+    about: Send a message on Bluesky.
+  - name: Twitch
+    url: https://www.twitch.tv/ravendwyr
+    about: Send a message on Twitch.
   - name: Azeroth
-    url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/argent-dawn/howlsin
-    about: Send a whisper in World of Warcraft.
+    url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/ghostlands/ferret
+    about: Send a message in-game.
