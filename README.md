@@ -33,10 +33,10 @@ This addon should work for everyone regardless of language, but most of the text
 
 ### Support
 
-[![Telegram](https://img.shields.io/badge/Telegram-contact-lightgray?style=flat-square&logo=telegram)](https://t.me/ravendwyr)
 [![Twitch](https://img.shields.io/twitch/status/ravendwyr?style=flat-square&logo=twitch&label=Twitch)](https://www.twitch.tv/ravendwyr)
-[![Discord](https://img.shields.io/discord/299308204393889802?style=flat-square&logo=discord&label=Discord)](https://discord.gg/rKWQ4HsXtt)
+[![Bluesky](https://img.shields.io/bluesky/followers/ravendwyr.bsky.social?style=flat-square&logo=bluesky&label=Bluesky)](https://bsky.app/profile/ravendwyr.bsky.social)
 [![Mastodon](https://img.shields.io/mastodon/follow/110671875370528026?domain=https%3A%2F%2Fgamepad.club&style=flat-square&logo=mastodon&label=Mastodon)](https://gamepad.club/@ravendwyr)
 
-[![GitHub](https://img.shields.io/badge/GitHub-sponsor-yellow?style=flat-square&logo=github%20sponsors)](https://github.com/sponsors/Ravendwyr)
+[![GitHub](https://img.shields.io/badge/GitHub-sponsor-yellow?style=flat-square&logo=github+sponsors)](https://github.com/sponsors/Ravendwyr)
+[![Twitch](https://img.shields.io/badge/Twitch-subscribe-yellow?style=flat-square&logo=twitch)](https://www.twitch.tv/subs/ravendwyr)
 [![Coffee](https://img.shields.io/badge/KoFi-support-yellow?style=flat-square&logo=kofi)](https://ko-fi.com/Ravendwyr)
