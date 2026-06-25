@@ -178,6 +178,10 @@ points[7] = { -- "Mulgore"
 	[51825924] = "11852:H",	-- Bloodhoof Village
 }
 
+points[85] = { -- Orgrimmar
+	[50683662] = "29036:H",	-- Temple of Earth, Deepholm
+}
+
 points[81] = { -- "Silithus"
 	[50844130] = "11836:H",	-- Cenarion Hold (south)
 	[60553304] = "11760:D",	-- Cenarion Hold (east)

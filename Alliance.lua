@@ -89,6 +89,10 @@ points[50] = { -- "StranglethornJungle"
 	[52056356] = "28922:H",	-- Fort Livingston
 }
 
+points[84] = { -- "StormwindCity"
+	[73321949] = "29036:H",	-- Temple of Earth, Deepholm
+}
+
 points[51] = { -- "SwampOfSorrows"
 	[76771417] = "11781:D",	-- Bogpaddle (west)
 	[70241573] = "28929:H",	-- Bogpaddle (east)
