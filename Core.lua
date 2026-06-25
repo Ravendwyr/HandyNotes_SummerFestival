@@ -16,7 +16,7 @@ SummerFestival.points = {}
 local db
 local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha = 0.8 } }
 
-local isClassic = WOW_PROJECT_ID == WOW_PROJECT_CATACLYSM_CLASSIC
+local isClassic = WOW_PROJECT_ID == WOW_PROJECT_MISTS_CLASSIC
 
 local continents = isClassic and {
 	[113]  = true, -- Northrend
@@ -120,7 +120,7 @@ function SummerFestival:OnEnter(mapFile, coord)
 	elseif mode == "D" then text = "Desecrate this Fire!"
 	elseif mode == "C" then text = "Steal the City's Flame" end
 
-	GameTooltip:SetText(text)
+	GameTooltip:SetText(text, 1, 0.82, 0)
 
 	if notes[questID] then
 		GameTooltip:AddLine(notes[questID])
@@ -150,7 +150,8 @@ local function createWaypoint(mapFile, coord)
 	elseif mode == "D" then text = "Desecrate this Fire!"
 	elseif mode == "C" then text = "Steal the City's Flame" end
 
-	TomTom:AddWaypoint(mapFile, x, y, { title = text, from = addOnName, persistent = false, minimap = true, world = true })
+	TomTom:AddWaypoint(mapFile, x, y, { title = text, from = addOnName, arrivaldistance = 10, cleardistance = 5, minimap = true, world = true })
+	TomTom:SetClosestWaypoint()
 end
 
 local function createAllWaypoints()
@@ -165,8 +166,6 @@ local function createAllWaypoints()
 			end
 		end
 	end
-
-	TomTom:SetClosestWaypoint()
 end
 
 function SummerFestival:OnClick(button, down, mapFile, coord)
@@ -260,6 +259,8 @@ local options = {
 -- check
 local setEnabled = false
 local function CheckEventActive()
+	if C_ChatInfo.InChatMessagingLockdown() then return end
+
 	local calendar = C_DateAndTime.GetCurrentCalendarTime()
 	local month, day, year = calendar.month, calendar.monthDay, calendar.year
 	local hour, minute = calendar.hour, calendar.minute

@@ -1,13 +1,15 @@
-## Interface: 100207
-## Title: HandyNotes_SummerFestival
-## Notes: Marks the locations of Midsummer Fire Festival bonfires on the worldmap and minimap.
+## Interface: 120007
+## Title: HandyNotes: Summer Festival
+## Notes: Displays the locations of Midsummer Festival bonfires.
 ## Author: Ravendwyr
 ## Version: @project-version@
-## X-Category: Map & Minimap
-## X-Curse-Project-ID: 45903
-## X-Wago-ID: Xb6Xxw6p
+## IconTexture: interface\icons\inv_summerfest_fireflower
+## Category: Map & Minimap
 ## SavedVariables: HandyNotes_SummerFestivalDB
 ## Dependencies: HandyNotes
+## AllowLoadGameType: standard
+## X-Curse-Project-ID: 45903
+## X-Wago-ID: Xb6Xxw6p
 
 Core.lua
 
