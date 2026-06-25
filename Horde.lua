@@ -510,3 +510,28 @@ points[2255] = { -- Azj-Kahet
 points[2339] = { -- Dornogal City
 	[48265152] = "87342:H", -- Dornogal
 }
+
+
+--------------
+-- Midnight --
+--------------
+
+points[2393] = { -- Silvermoon City
+	[48628096] = "92556:H", -- Silvermoon Bazaar
+}
+
+points[2395] = { -- Eversong Woods
+	[48906391] = "92555:H", -- Tranquillien
+}
+
+points[2405] = { -- Voidstorm
+	[53567024] = "89388:H",
+}
+
+points[2413] = { -- Harandar
+	[54245154] = "89402:H",
+}
+
+points[2437] = { -- Zul'Aman
+	[54361685] = "92557:H", -- Temple of Jan'alai
+}
