@@ -2,6 +2,8 @@
 
 Marks the locations of Midsummer Fire Festival bonfires on the worldmap and minimap.
 
+[![Release](https://cf.way2muchnoise.eu/45903.svg)](https://www.curseforge.com/wow/addons/handynotes-summerfestival)
+
 [![Builder](https://img.shields.io/github/actions/workflow/status/ravendwyr/handynotes_summerfestival/upload.yml?branch=master&label=Build&logo=github+actions&style=flat-square)](https://github.com/Ravendwyr/HandyNotes_SummerFestival/actions)
 [![Version](https://img.shields.io/github/v/tag/ravendwyr/handynotes_summerfestival?label=Version&logo=curseforge&style=flat-square)](https://www.curseforge.com/wow/addons/handynotes-summerfestival/files/all)
 [![Tracker](https://img.shields.io/github/issues/ravendwyr/handynotes_summerfestival?label=Issues&logo=github&style=flat-square)](https://github.com/Ravendwyr/HandyNotes_SummerFestival/issues)
