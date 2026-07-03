@@ -133,16 +133,16 @@ function SummerFestival:OnEnter(mapFile, coord)
 	elseif mode == "D" then text = "Desecrate this Fire!"
 	elseif mode == "C" then text = "Steal the City's Flame" end
 
-	GameTooltip:SetText(text, 1, 0.82, 0)
+	GameTooltip:SetText(text, 1, 1, 1)
 
 	if notes[questID] then
 		GameTooltip:AddLine(notes[questID])
-		GameTooltip:AddLine(" ")
 	end
 
 	if TomTom then
-		GameTooltip:AddLine("Right-click to set a waypoint.", 1, 1, 1)
-		GameTooltip:AddLine("Control-Right-click to set waypoints to every bonfire.", 1, 1, 1)
+		GameTooltip:AddLine(" ")
+		GameTooltip:AddLine("Right-click to set a waypoint.")
+		GameTooltip:AddLine("Control-Right-click to set waypoints to every bonfire.")
 	end
 
 	GameTooltip:Show()
