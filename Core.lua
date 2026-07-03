@@ -49,6 +49,9 @@ local continents = isClassic and {
 local notes = isClassic and {
 	-- Vashj'ir
 	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service.",
+
+	-- Deepholm
+	["29036"] = "In Deepholm.",
 } or {
 	-- Arathi
 	["11732"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
@@ -91,6 +94,9 @@ local notes = isClassic and {
 
 	-- Vashj'ir
 	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service.",
+
+	-- Deepholm
+	["29036"] = "In Deepholm.",
 
 	-- Uldum
 	["28948"] = "Speak to Zidormi in Ramkahen to gain access to this bonfire.",
