@@ -16,16 +16,17 @@ SummerFestival.points = {}
 local db
 local defaults = { profile = { completed = false, icon_scale = 1.4, icon_alpha = 0.8 } }
 
-local isClassic = WOW_PROJECT_ID == WOW_PROJECT_MISTS_CLASSIC
+local isClassic = WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE
 
 local continents = isClassic and {
+	[12]   = true, -- Kalimdor
+	[13]   = true, -- Eastern Kingdoms
 	[113]  = true, -- Northrend
 	[203]  = true, -- Vashj'ir
 	[224]  = true, -- Stranglethorn Vale
+	[424]  = true, -- Pandaria
 	[947]  = true, -- Azeroth
-	[1414] = true, -- Kalimdor
-	[1415] = true, -- Eastern Kingdoms
-	[1945] = true, -- Outland
+	[1467] = true, -- Outland
 } or {
 	[12]   = true, -- Kalimdor
 	[13]   = true, -- Eastern Kingdoms
@@ -45,7 +46,10 @@ local continents = isClassic and {
 	[2537] = true, -- Quel'Thalas
 }
 
-local notes = {
+local notes = isClassic and {
+	-- Vashj'ir
+	["29031"] = "In an underwater cave. Swim downwards towards the bubbles or use the seahorse taxi service.",
+} or {
 	-- Arathi
 	["11732"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",
 	["11764"] = "Speak to Zidormi at the south of the zone to gain access to this bonfire.",

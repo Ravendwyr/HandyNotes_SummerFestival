@@ -1,0 +1,17 @@
+## Interface: 50504
+## Title: HandyNotes: Summer Festival
+## Notes: Displays the locations of Midsummer Festival bonfires.
+## Author: Ravendwyr
+## Version: @project-version@
+## IconTexture: interface\icons\inv_summerfest_fireflower
+## Category: Map & Minimap
+## SavedVariables: HandyNotes_SummerFestivalDB
+## Dependencies: HandyNotes
+## AllowLoadGameType: mists
+## X-Curse-Project-ID: 45903
+## X-Wago-ID: Xb6Xxw6p
+
+Core.lua
+
+AllianceClassic.lua
+HordeClassic.lua
