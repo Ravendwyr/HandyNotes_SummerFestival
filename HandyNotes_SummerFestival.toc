@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120105
 ## Title: HandyNotes: Summer Festival
 ## Notes: Displays the locations of Midsummer Festival bonfires.
 ## Author: Ravendwyr
